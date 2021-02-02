@@ -1,0 +1,2175 @@
+{
+  "current": {
+    "color_accent": "#ffffff",
+    "color_text": "#3d3d3d",
+    "color_meta_text": "#757575",
+    "color_button_text": "#000000",
+    "color_bg": "#f5f5f5",
+    "color_border": "#e2e2e2",
+    "color_input": "#ffffff",
+    "color_input_text": "#363636",
+    "color_secondary_button": "#000000",
+    "color_secondary_button_text": "#ffffff",
+    "color_sale_badge": "#b6534c",
+    "color_success_message": "#82b875",
+    "color_error_message": "#b6534c",
+    "color_header_text": "#363636",
+    "color_header_bg": "#f5f5f5",
+    "color_header_border": "rgba(0,0,0,0)",
+    "color_header_icon": "#000000",
+    "color_contrast_text": "#363636",
+    "color_contrast_meta_text": "#707070",
+    "color_contrast_bg": "#f0f0f0",
+    "color_contrast_border": "rgba(0,0,0,0)",
+    "color_contrast_input": "#ffffff",
+    "color_contrast_input_text": "#363636",
+    "color_navigation_text": "#ffffff",
+    "color_navigation_meta_text": "#979797",
+    "color_navigation_bg": "#070707",
+    "color_navigation_border": "rgba(0,0,0,0)",
+    "color_navigation_feature": "#26352f",
+    "color_drawer_text": "#ffffff",
+    "color_drawer_meta_text": "#8a8a8a",
+    "color_drawer_bg": "#070707",
+    "color_drawer_border": "rgba(0,0,0,0)",
+    "color_footer_text": "#ffffff",
+    "color_footer_meta_text": "#cfeee2",
+    "color_footer_bg": "#111111",
+    "color_footer_border": "#4b655b",
+    "color_footer_input": "#ffffff",
+    "color_footer_input_text": "#757575",
+    "font_heading": "agmena_n7",
+    "size_heading": 22,
+    "uppercase_headings": true,
+    "font_body": "assistant_n6",
+    "size_body": 16,
+    "font_logo": "agmena_n7",
+    "font_logo_size": 30,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "search_max_result_size": 2,
+    "search_show_products": true,
+    "search_show_articles": true,
+    "search_show_pages": true,
+    "search_show_price": true,
+    "search_show_vendor": false,
+    "swatch_option": "Color",
+    "enable_ajax": true,
+    "cart_quick_shop_enabled": true,
+    "cart_quick_shop_show_quantity_input": true,
+    "cart_notes_enable": true,
+    "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/jade_logo_black.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#080808",
+    "checkout_error_color": "#e32c2b",
+    "share_image": "",
+    "currency_format": "money_with_currency_format",
+    "sections": {
+      "static-footer": {
+        "type": "static-footer",
+        "blocks": {
+          "static-footer-0": {
+            "type": "text",
+            "settings": {
+              "title": "JADE",
+              "text": "<p>The best sparkling wines on the internet. <\/p>"
+            }
+          },
+          "static-footer-1": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "static-footer-2": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "static-footer-3": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "static-footer-0",
+          "static-footer-1",
+          "static-footer-2",
+          "static-footer-3"
+        ],
+        "settings": {
+          "show_newsletter_signup": true,
+          "show_payment_icons": true,
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "static-header": {
+        "type": "static-header",
+        "settings": {
+          "header_style": "inline",
+          "header_alignment": "left",
+          "logo": "shopify:\/\/shop_images\/jade_logo_black.png",
+          "logo_max_width": 90,
+          "sticky_header_logo": "shopify:\/\/shop_images\/jade_logo_black.png",
+          "menu": "main-menu",
+          "transparent_index_header_enabled": true,
+          "transparent_about_header_enabled": false,
+          "transparent_header_foreground_color": "#ffffff",
+          "transparent_header_border_color": "#000000",
+          "transparent_header_border_opacity": 0,
+          "transparent_header_logo": "shopify:\/\/shop_images\/jade_logo_283c2ca6-4d79-4859-9aac-49956d9f3149.png"
+        }
+      },
+      "product": {
+        "type": "product",
+        "settings": {
+          "show_vendor": false,
+          "show_swatches": true,
+          "show_share_buttons": true,
+          "show_quantity_input": true,
+          "enable_payment_button": true,
+          "enable_video_looping": true
+        }
+      },
+      "static-recently-viewed": {
+        "type": "static-recently-viewed",
+        "settings": {
+          "enabled": true,
+          "title": "Recently Viewed",
+          "alignment": "above",
+          "rows": 2,
+          "per_row": 2,
+          "outline": false
+        }
+      },
+      "static-collection": {
+        "type": "static-collection",
+        "settings": {
+          "show_collection_image": true,
+          "show_swatches": false,
+          "collection_products_per_row": 2
+        }
+      },
+      "dynamic-featured-collection-1": {
+        "type": "dynamic-featured-collection",
+        "settings": {
+          "collection": "rose",
+          "title": "",
+          "collection_subheading": "",
+          "link_text": "",
+          "heading_alignment": "center",
+          "products_per_row": 3,
+          "rows": 1,
+          "outline": false
+        }
+      },
+      "dynamic-newsletter": {
+        "type": "dynamic-newsletter",
+        "settings": {
+          "title": "Newsletters can reinforce your brand",
+          "subheading": "<p>Include a short sentence describing what someone can expect from your newsletter.<\/p>",
+          "outline": false
+        }
+      },
+      "static-contact": {
+        "type": "static-contact",
+        "settings": {
+          "heading": "Email us",
+          "subheading": "<p>Send us an email through the form. We usually respond within one business day.<\/p>"
+        }
+      },
+      "static-article": {
+        "type": "static-article",
+        "settings": {
+          "overlay_opacity": 20,
+          "overlay_color": "#000000",
+          "text_color": "#ffffff"
+        }
+      },
+      "dynamic-slideshow": {
+        "type": "dynamic-slideshow",
+        "blocks": {
+          "dynamic-slideshow-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/jade_HP.png",
+              "title": "Exquisite Taste For Exquisite People",
+              "subheading": "",
+              "link": "shopify:\/\/collections\/all",
+              "link_text": "Shop now",
+              "link_style": "button",
+              "overlay_opacity": 30,
+              "overlay_color": "#000000",
+              "text_color": "#ffffff",
+              "heading_max_width": 9,
+              "text_max_width": 27,
+              "horizontal_text_position": "left",
+              "vertical_text_position": "bottom"
+            }
+          }
+        },
+        "block_order": [
+          "dynamic-slideshow-0"
+        ],
+        "settings": {
+          "aspect_ratio": "full_height"
+        }
+      },
+      "dynamic-rich-text": {
+        "type": "dynamic-rich-text",
+        "settings": {
+          "title": "BRUT GOLD LABEL",
+          "text": "<p>This is our signature bottle with tasty notes of locally sourced grapes, and sustainably produced and bottled.<\/p>",
+          "link_text": ""
+        }
+      },
+      "dynamic-text-columns-with-images": {
+        "type": "dynamic-text-columns-with-images",
+        "blocks": {
+          "dynamic-text-columns-with-images-0": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/sugar.png",
+              "image_max_width": 20,
+              "title": "No Sugar Added",
+              "subheading": "Without the sugar, there's no hangover. We keep all the infused natural sweetness with every sip. It's just the good stuff.",
+              "link_text": "Read more"
+            }
+          },
+          "dynamic-text-columns-with-images-1": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/vegan.png",
+              "image_max_width": 20,
+              "title": "Vegan Friendly",
+              "subheading": "What's in the bottle only comes from mother earth, and no-where else.",
+              "link_text": "Read more"
+            }
+          },
+          "dynamic-text-columns-with-images-2": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/chems.png",
+              "image_max_width": 20,
+              "title": "Nothing Artificial",
+              "subheading": "No additives, just as it's intended.",
+              "link_text": "Read more"
+            }
+          }
+        },
+        "block_order": [
+          "dynamic-text-columns-with-images-0",
+          "dynamic-text-columns-with-images-1",
+          "dynamic-text-columns-with-images-2"
+        ],
+        "settings": {
+          "title": "",
+          "subheading": "",
+          "outline": false
+        }
+      },
+      "dynamic-testimonials": {
+        "type": "dynamic-testimonials",
+        "blocks": {
+          "dynamic-testimonials-0": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "This is literally the best sparkling wine I’ve ever tasted. Ideal for day-drinking and waking up in the morning not feeling like garbage.",
+              "author": ""
+            }
+          }
+        },
+        "block_order": [
+          "dynamic-testimonials-0"
+        ],
+        "settings": {
+          "icon_width": 40,
+          "outline": false
+        }
+      },
+      "dynamic-slideshow-2": {
+        "type": "dynamic-slideshow",
+        "blocks": {
+          "dynamic-slideshow-2-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cover.png",
+              "title": "A Wine Experience Like Never Before",
+              "subheading": "",
+              "link": "#",
+              "link_text": "Shop now",
+              "link_style": "button",
+              "overlay_opacity": 20,
+              "overlay_color": "#000000",
+              "text_color": "#ffffff",
+              "heading_max_width": 10,
+              "text_max_width": 24,
+              "horizontal_text_position": "left",
+              "vertical_text_position": "middle"
+            }
+          }
+        },
+        "block_order": [
+          "dynamic-slideshow-2-0"
+        ],
+        "settings": {
+          "aspect_ratio": "full_height"
+        }
+      },
+      "static-features": {
+        "type": "static-features",
+        "settings": {
+          "outline": false
+        }
+      },
+      "static-full-width-features": {
+        "type": "static-full-width-features",
+        "blocks": {
+          "static-full-width-features-1": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cover.png",
+              "video_url": "",
+              "overlay_opacity": 0,
+              "overlay_color": "#000000",
+              "text_color": "#ffffff",
+              "title": "",
+              "subheading": "",
+              "text_max_width": 25,
+              "link": "#",
+              "link_text": "",
+              "link_style": "button",
+              "horizontal_text_position": "left",
+              "vertical_text_position": "middle"
+            }
+          }
+        },
+        "block_order": [
+          "static-full-width-features-1"
+        ],
+        "settings": {}
+      },
+      "static-announcement-bar": {
+        "type": "static-announcement-bar",
+        "blocks": {
+          "static-announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "background_color": "",
+              "text_color": "#000000",
+              "text": "SHIPPING!"
+            }
+          }
+        },
+        "block_order": [
+          "static-announcement-bar-0"
+        ],
+        "settings": {
+          "announcement_bar_enabled": false,
+          "announcement_bar_timing": 6
+        }
+      },
+      "static-drawer-menu": {
+        "type": "static-drawer-menu",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/jade_logo_283c2ca6-4d79-4859-9aac-49956d9f3149.png",
+          "menu": "main-menu",
+          "show_account": true,
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "static-exit-intent": {
+        "type": "static-exit-intent",
+        "settings": {
+          "enable_exit_intent": false,
+          "exit_intent_position": "bottom-right",
+          "exit_intent_heading": "Sign up for our newsletter",
+          "exit_intent_text": "",
+          "exit_intent_dismiss_text": "No thanks"
+        }
+      },
+      "1598140255155": {
+        "type": "dynamic-featured-product",
+        "settings": {
+          "product": "jade-rose",
+          "show_vendor": true,
+          "show_swatches": false,
+          "show_share_buttons": false,
+          "show_quantity_input": true,
+          "enable_payment_button": true,
+          "enable_video_looping": true,
+          "outline": false
+        }
+      },
+      "static-product-images": {
+        "type": "static-product-images",
+        "settings": {
+          "enabled": false
+        }
+      },
+      "static-testimonials": {
+        "type": "static-testimonials",
+        "settings": {
+          "enabled": false,
+          "icon_width": 75,
+          "outline": true
+        }
+      },
+      "static-blog-posts": {
+        "type": "static-blog-posts",
+        "settings": {
+          "enabled": false,
+          "title": "Blog posts",
+          "blog": "",
+          "post_limit": 3
+        }
+      },
+      "static-newsletter": {
+        "type": "static-newsletter",
+        "settings": {
+          "enabled": false,
+          "title": "Newsletters can reinforce your brand",
+          "subheading": "<p>Include a short sentence describing what someone can expect from your newsletter.<\/p>",
+          "outline": false
+        }
+      },
+      "static-social-icons": {
+        "type": "static-social-icons",
+        "settings": {
+          "enabled": false,
+          "title": "Start the conversation",
+          "pinterest_enabled": false,
+          "instagram_enabled": false,
+          "facebook_enabled": false,
+          "tumblr_enabled": false,
+          "twitter_enabled": false,
+          "vimeo_enabled": false,
+          "youtube_enabled": false,
+          "outline": false
+        }
+      },
+      "static-featured-collection": {
+        "type": "static-featured-collection",
+        "settings": {
+          "enabled": false,
+          "collection": "rose",
+          "title": "Featured collection",
+          "collection_subheading": "",
+          "link_text": "",
+          "heading_alignment": "center",
+          "products_per_row": 2,
+          "rows": 1,
+          "outline": false
+        }
+      },
+      "static-product-recommendations": {
+        "type": "static-product-recommendations",
+        "settings": {
+          "enabled": true,
+          "title": "You May Also Like",
+          "alignment": "left",
+          "rows": 1,
+          "per_row": 3,
+          "outline": false
+        }
+      },
+      "1599602267470": {
+        "type": "dynamic-rich-text",
+        "settings": {
+          "title": "JADE NEAR YOU",
+          "text": "",
+          "link_text": ""
+        }
+      },
+      "1599618089347": {
+        "type": "dynamic-collage",
+        "blocks": {
+          "1599618089347-2": {
+            "type": "grid_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/guy.png",
+              "size": "large",
+              "overlay_opacity": 10,
+              "overlay_color": "#000000",
+              "text_color": "#ffffff",
+              "heading": "",
+              "subheading": "",
+              "text_max_width": 19,
+              "link_text": "",
+              "link_style": "button",
+              "horizontal_text_position": "left",
+              "vertical_text_position": "middle"
+            }
+          },
+          "1599618089347-0": {
+            "type": "grid_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC04632.jpg",
+              "size": "small",
+              "overlay_opacity": 10,
+              "overlay_color": "#000000",
+              "text_color": "#ffffff",
+              "heading": "",
+              "subheading": "",
+              "text_max_width": 20,
+              "link_text": "",
+              "link_style": "button",
+              "horizontal_text_position": "left",
+              "vertical_text_position": "top"
+            }
+          },
+          "1599618089347-1": {
+            "type": "grid_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC05046-copy.jpg",
+              "size": "small",
+              "overlay_opacity": 10,
+              "overlay_color": "#000000",
+              "text_color": "#ffffff",
+              "heading": "",
+              "subheading": "",
+              "text_max_width": 19,
+              "link_text": "",
+              "link_style": "button",
+              "horizontal_text_position": "left",
+              "vertical_text_position": "middle"
+            }
+          }
+        },
+        "block_order": [
+          "1599618089347-2",
+          "1599618089347-0",
+          "1599618089347-1"
+        ],
+        "settings": {}
+      },
+      "16038383828f6b997d": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 24,
+          "feed_width": 100,
+          "html_area": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "dynamic-slideshow",
+      "dynamic-rich-text",
+      "dynamic-featured-collection-1",
+      "dynamic-text-columns-with-images",
+      "1599618089347",
+      "dynamic-slideshow-2",
+      "dynamic-testimonials",
+      "1598140255155",
+      "16038383828f6b997d",
+      "1599602267470"
+    ]
+  },
+  "presets": {
+    "Chic": {
+      "color_accent": "#67a281",
+      "color_text": "#3d3d3d",
+      "color_meta_text": "#757575",
+      "color_button_text": "#ffffff",
+      "color_bg": "#ffffff",
+      "color_border": "#e2e2e2",
+      "color_secondary_button": "#f8f8f8",
+      "color_secondary_button_text": "#50906c",
+      "color_sale_badge": "#b6534c",
+      "color_success_message": "#82b875",
+      "color_error_message": "#b6534c",
+      "color_header_text": "#363636",
+      "color_header_bg": "#ffffff",
+      "color_header_border": "#e2e2e2",
+      "color_header_icon": "#9a9a9a",
+      "color_contrast_text": "#363636",
+      "color_contrast_meta_text": "#707070",
+      "color_contrast_bg": "#fafafa",
+      "color_contrast_border": "#e2e2e2",
+      "color_navigation_text": "#3d3d3d",
+      "color_navigation_meta_text": "#737373",
+      "color_navigation_bg": "#fafafa",
+      "color_navigation_border": "#e6e6e6",
+      "color_navigation_feature": "#ffffff",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_meta_text": "#8a8a8a",
+      "color_drawer_bg": "#212121",
+      "color_drawer_border": "#434343",
+      "color_footer_text": "#363636",
+      "color_footer_meta_text": "#737373",
+      "color_footer_bg": "#f9f9f9",
+      "color_footer_border": "#e2e2e2",
+      "color_footer_input": "#ffffff",
+      "color_footer_input_text": "#757575",
+      "font_heading": "electra_n4",
+      "size_heading": 16,
+      "uppercase_headings": false,
+      "font_body": "assistant_n4",
+      "size_body": 16,
+      "font_logo": "electra_n7",
+      "font_logo_size": 32,
+      "share_image": "",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "cart_notes_enable": true,
+      "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+      "currency_format": "money_with_currency_format",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "sections": {
+        "dynamic-featured-product": {
+          "type": "dynamic-featured-product",
+          "settings": {
+            "product": "",
+            "show_vendor": true,
+            "show_share_buttons": false,
+            "enable_payment_button": true,
+            "outline": false
+          }
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "blocks": {
+            "static-footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "static-footer-1": {
+              "type": "link_list",
+              "settings": {
+                "menu": "main-menu"
+              }
+            },
+            "static-footer-2": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "static-footer-0",
+            "static-footer-1",
+            "static-footer-2"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        },
+        "static-header": {
+          "type": "static-header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 120,
+            "transparent_header_foreground_color": "#ffffff",
+            "transparent_header_border_color": "#ffffff",
+            "transparent_header_border_opacity": 20,
+            "transparent_header_logo": ""
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "enable_payment_button": true
+          }
+        },
+        "static-blog-posts": {
+          "type": "static-blog-posts",
+          "settings": {
+            "enabled": true,
+            "title": "Blog posts",
+            "blog": "news",
+            "post_limit": 3
+          }
+        },
+        "static-recently-viewed": {
+          "type": "static-recently-viewed",
+          "settings": {
+            "enabled": true,
+            "title": "Recently Viewed",
+            "alignment": "above",
+            "rows": 1,
+            "per_row": 4,
+            "outline": false
+          }
+        },
+        "static-collection": {
+          "type": "static-collection",
+          "settings": {
+            "show_collection_image": true
+          }
+        },
+        "dynamic-newsletter": {
+          "type": "dynamic-newsletter",
+          "settings": {
+            "title": "Join our newsletter",
+            "subheading": "<p>Include a short sentence describing what someone can expect from your newsletter.<\/p>",
+            "outline": false
+          }
+        },
+        "static-product-images": {
+          "type": "static-product-images",
+          "settings": {
+            "enabled": true
+          }
+        },
+        "static-contact": {
+          "type": "static-contact",
+          "settings": {
+            "heading": "Email us",
+            "subheading": "<p>Send us an email through the form. We usually respond within one business day.<\/p>"
+          }
+        },
+        "static-article": {
+          "type": "static-article",
+          "settings": {
+            "overlay_opacity": 20,
+            "overlay_color": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "dynamic-slideshow0": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-00": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 60,
+                "overlay_color": "#707070",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 34,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            },
+            "dynamic-slideshow-01": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 60,
+                "overlay_color": "#707070",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 34,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-00",
+            "dynamic-slideshow-01"
+          ],
+          "settings": {
+            "aspect_ratio": "full_height"
+          }
+        },
+        "dynamic-slideshow-1": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-11": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 60,
+                "overlay_color": "#707070",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 34,
+                "horizontal_text_position": "center",
+                "vertical_text_position": "middle"
+              }
+            },
+            "dynamic-slideshow-12": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 60,
+                "overlay_color": "#707070",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 34,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-11",
+            "dynamic-slideshow-12"
+          ],
+          "settings": {
+            "aspect_ratio": "full_height"
+          }
+        },
+        "dynamic-rich-text": {
+          "type": "dynamic-rich-text",
+          "settings": {
+            "title": "This is the Rich text section",
+            "text": "<p>Use this text area to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "dynamic-collage": {
+          "type": "dynamic-collage",
+          "blocks": {
+            "dynamic-collage-0": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "small",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "This is the Collage.",
+                "subheading": "",
+                "text_max_width": 20,
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "arrow_link",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "bottom"
+              }
+            },
+            "dynamic-collage-1": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "large",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "This is a large portrait block.",
+                "subheading": "Try adding two small blocks before and after two large blocks for an asymmetrical mosaic effect.",
+                "text_max_width": 19,
+                "link": "",
+                "link_text": "",
+                "link_style": "button",
+                "horizontal_text_position": "right",
+                "vertical_text_position": "top"
+              }
+            },
+            "dynamic-collage-3": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "small",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "This is the Collage.",
+                "subheading": "",
+                "text_max_width": 19,
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "arrow_link",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "bottom"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-collage-0",
+            "dynamic-collage-1",
+            "dynamic-collage-3"
+          ],
+          "settings": {}
+        },
+        "dynamic-testimonials": {
+          "type": "dynamic-testimonials",
+          "blocks": {
+            "dynamic-testimonials-0": {
+              "type": "testimonial",
+              "settings": {
+                "icon": "",
+                "quote": "Absolutely unparalleled products and service. I'm confident that this store will be the next big thing in its industry, and that its products will be timeless.",
+                "author": "Steve Jordans"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-testimonials-0"
+          ],
+          "settings": {
+            "icon_width": 40,
+            "outline": false
+          }
+        },
+        "dynamic-full-width-image": {
+          "type": "dynamic-full-width-image",
+          "settings": {
+            "image": "",
+            "overlay_opacity": 50,
+            "overlay_color": "#ffffff",
+            "text_color": "#000000",
+            "title": "Full width image section",
+            "subheading": "This section can be used to divide page content into new zones, or try using it with the Collage to create a magazine-style layout.",
+            "text_max_width": 24,
+            "link": "#",
+            "link_text": "Try it out",
+            "link_style": "button",
+            "horizontal_text_position": "left",
+            "vertical_text_position": "middle"
+          }
+        },
+        "dynamic-featured-product-0": {
+          "type": "dynamic-featured-product",
+          "settings": {
+            "product": "",
+            "show_vendor": true,
+            "show_share_buttons": false,
+            "enable_payment_button": true,
+            "outline": false
+          }
+        },
+        "dynamic-full-width-image-1": {
+          "type": "dynamic-full-width-image",
+          "settings": {
+            "image": "",
+            "video_url": "",
+            "aspect_ratio": "3_2",
+            "overlay_opacity": 30,
+            "overlay_color": "#ffffff",
+            "text_color": "#121212",
+            "title": "Full width image section",
+            "subheading": "This section can be used to divide page content into new zones, or try using it with the Collage to create a magazine-style layout.",
+            "text_max_width": 24,
+            "link": "#",
+            "link_text": "Try it out",
+            "link_style": "button",
+            "horizontal_text_position": "left",
+            "vertical_text_position": "middle"
+          }
+        },
+        "dynamic-featured-collection": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "left",
+            "products_per_row": 3,
+            "rows": 1,
+            "outline": false
+          }
+        },
+        "dynamic-featured-collection-1": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "left",
+            "products_per_row": 3,
+            "rows": 1,
+            "outline": false
+          }
+        },
+        "dynamic-featured-collection-2": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "center",
+            "products_per_row": 4,
+            "rows": 2,
+            "outline": false
+          }
+        },
+        "dynamic-full-width-image-2": {
+          "type": "dynamic-full-width-image",
+          "settings": {
+            "image": "",
+            "video_url": "",
+            "aspect_ratio": "3_2",
+            "overlay_opacity": 30,
+            "overlay_color": "#ffffff",
+            "text_color": "#121212",
+            "title": "Full width image section",
+            "subheading": "This section can be used to divide page content into new zones, or try using it with the Collage to create a magazine-style layout.",
+            "text_max_width": 24,
+            "link": "#",
+            "link_text": "Try it out",
+            "link_style": "button",
+            "horizontal_text_position": "left",
+            "vertical_text_position": "middle"
+          }
+        },
+        "dynamic-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {
+            "title": "Blog posts",
+            "blog": "news",
+            "post_limit": 3,
+            "outline": false
+          }
+        }
+      },
+      "content_for_index": [
+        "dynamic-slideshow0",
+        "dynamic-rich-text",
+        "dynamic-collage",
+        "dynamic-testimonials",
+        "dynamic-full-width-image",
+        "dynamic-featured-collection",
+        "dynamic-featured-collection-1",
+        "dynamic-full-width-image-1",
+        "dynamic-featured-collection-2",
+        "dynamic-full-width-image-2",
+        "dynamic-featured-product-0",
+        "dynamic-blog-posts",
+        "dynamic-slideshow-1"
+      ]
+    },
+    "Modern": {
+      "color_accent": "#ff460c",
+      "color_text": "#363636",
+      "color_meta_text": "#757575",
+      "color_button_text": "#ffffff",
+      "color_bg": "#ffffff",
+      "color_border": "#e2e2e2",
+      "color_input": "#ffffff",
+      "color_input_text": "#3a3a3a",
+      "color_secondary_button": "#f7f7f7",
+      "color_secondary_button_text": "#494949",
+      "color_sale_badge": "#b6534c",
+      "color_success_message": "#82b875",
+      "color_error_message": "#b6534c",
+      "color_header_text": "#363636",
+      "color_header_bg": "#ffffff",
+      "color_header_border": "#e2e2e2",
+      "color_header_icon": "#9a9a9a",
+      "color_contrast_text": "#363636",
+      "color_contrast_meta_text": "#707070",
+      "color_contrast_bg": "#f9f9f9",
+      "color_contrast_border": "#e2e2e2",
+      "color_contrast_input": "#ffffff",
+      "color_contrast_input_text": "#7c7c7c",
+      "color_navigation_text": "#ffffff",
+      "color_navigation_meta_text": "#7da8a9",
+      "color_navigation_bg": "#1b4142",
+      "color_navigation_border": "#285556",
+      "color_navigation_feature": "#244960",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_meta_text": "#a8a8a8",
+      "color_drawer_bg": "#1b4142",
+      "color_drawer_border": "#285556",
+      "color_footer_text": "#363636",
+      "color_footer_meta_text": "#737373",
+      "color_footer_bg": "#f9f9f9",
+      "color_footer_border": "#e2e2e2",
+      "color_footer_input": "#ffffff",
+      "color_footer_input_text": "#757575",
+      "font_heading": "electra_n4",
+      "size_heading": 16,
+      "uppercase_headings": false,
+      "font_body": "assistant_n4",
+      "size_body": 16,
+      "font_logo": "electra_n7",
+      "font_logo_size": 32,
+      "share_image": "",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "cart_notes_enable": true,
+      "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+      "currency_format": "money_with_currency_format",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "sections": {
+        "dynamic-featured-product": {
+          "type": "dynamic-featured-product",
+          "settings": {
+            "product": "",
+            "show_vendor": true,
+            "show_share_buttons": false,
+            "enable_payment_button": true,
+            "outline": false
+          }
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "blocks": {
+            "static-footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "static-footer-1": {
+              "type": "link_list",
+              "settings": {
+                "menu": "main-menu"
+              }
+            },
+            "static-footer-2": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "static-footer-0",
+            "static-footer-1",
+            "static-footer-2"
+          ],
+          "settings": {
+            "show_newsletter_signup": true,
+            "show_payment_icons": true
+          }
+        },
+        "static-header": {
+          "type": "static-header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 120,
+            "transparent_header_foreground_color": "#ffffff",
+            "transparent_header_border_color": "#ffffff",
+            "transparent_header_border_opacity": 10,
+            "transparent_header_logo": ""
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "show_vendor": true,
+            "show_share_buttons": true,
+            "enable_payment_button": true
+          }
+        },
+        "static-blog-posts": {
+          "type": "static-blog-posts",
+          "settings": {
+            "enabled": false,
+            "title": "Blog posts",
+            "blog": "news",
+            "post_limit": 3
+          }
+        },
+        "static-recently-viewed": {
+          "type": "static-recently-viewed",
+          "settings": {
+            "enabled": false,
+            "title": "Recently Viewed",
+            "alignment": "left",
+            "rows": 1,
+            "per_row": 3,
+            "outline": false
+          }
+        },
+        "static-collection": {
+          "type": "static-collection",
+          "settings": {
+            "show_collection_image": false
+          }
+        },
+        "static-product-images": {
+          "type": "static-product-images",
+          "settings": {
+            "enabled": true
+          }
+        },
+        "static-contact": {
+          "type": "static-contact",
+          "settings": {
+            "heading": "Email us",
+            "subheading": "<p>Send us an email through the form. We usually respond within one business day.<\/p>"
+          }
+        },
+        "static-article": {
+          "type": "static-article",
+          "settings": {
+            "overlay_opacity": 20,
+            "overlay_color": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "dynamic-social-icons": {
+          "type": "dynamic-social-icons",
+          "settings": {
+            "title": "Start the conversation",
+            "pinterest_enabled": true,
+            "instagram_enabled": true,
+            "facebook_enabled": true,
+            "tumblr_enabled": true,
+            "twitter_enabled": true,
+            "vimeo_enabled": true,
+            "youtube_enabled": true,
+            "outline": false
+          }
+        },
+        "dynamic-slideshow": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-0": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "",
+                "link_text": "",
+                "link_style": "button",
+                "overlay_opacity": 60,
+                "overlay_color": "#707070",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 24,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            },
+            "dynamic-slideshow-1": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "",
+                "link_text": "",
+                "link_style": "button",
+                "overlay_opacity": 60,
+                "overlay_color": "#707070",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 24,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-0",
+            "dynamic-slideshow-1"
+          ],
+          "settings": {}
+        },
+        "dynamic-rich-text": {
+          "type": "dynamic-rich-text",
+          "settings": {
+            "title": "This is the Rich text section",
+            "text": "<p>Use this text area to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "dynamic-collage": {
+          "type": "dynamic-collage",
+          "blocks": {
+            "dynamic-collage-1": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "large",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "text_max_width": 19,
+                "link": "",
+                "link_text": "",
+                "link_style": "button",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            },
+            "dynamic-collage-0": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "small",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "This is the Collage.",
+                "subheading": "Mix and match between large portrait blocks and small landscape blocks.",
+                "text_max_width": 20,
+                "link": "#",
+                "link_text": "Try it out",
+                "link_style": "button",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            },
+            "dynamic-collage-3": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "small",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "Have control over your content",
+                "subheading": "Each block has text placement and max width options so you can fine tune your message and balance it with your imagery.",
+                "text_max_width": 19,
+                "link": "#",
+                "link_text": "Try it out",
+                "link_style": "button",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-collage-1",
+            "dynamic-collage-0",
+            "dynamic-collage-3"
+          ],
+          "settings": {}
+        },
+        "dynamic-testimonials": {
+          "type": "dynamic-testimonials",
+          "blocks": {
+            "dynamic-testimonials-0": {
+              "type": "testimonial",
+              "settings": {
+                "icon": "",
+                "quote": "Absolutely unparalleled products and service. I'm confident that this store will be the next big thing in its industry, and that its products will be timeless.",
+                "author": "Steve Jordans"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-testimonials-0"
+          ],
+          "settings": {
+            "icon_width": 40,
+            "outline": false
+          }
+        },
+        "dynamic-full-width-image": {
+          "type": "dynamic-full-width-image",
+          "settings": {
+            "image": "",
+            "overlay_opacity": 60,
+            "overlay_color": "#707070",
+            "text_color": "#ffffff",
+            "title": "Full width image section",
+            "subheading": "This section can be used to organize page content into different areas, or along with the Collage section to create a magazine-style layout.",
+            "text_max_width": 30,
+            "link": "#",
+            "link_text": "Try it out",
+            "link_style": "button",
+            "horizontal_text_position": "center",
+            "vertical_text_position": "middle"
+          }
+        },
+        "dynamic-featured-collection": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "left",
+            "products_per_row": 3,
+            "rows": 1,
+            "outline": false
+          }
+        },
+        "dynamic-featured-collection-1": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "left",
+            "products_per_row": 3,
+            "rows": 1,
+            "outline": false
+          }
+        },
+        "dynamic-full-width-image-2": {
+          "type": "dynamic-full-width-image",
+          "settings": {
+            "image": "",
+            "overlay_opacity": 50,
+            "overlay_color": "#707070",
+            "text_color": "#ffffff",
+            "title": "Full width image section",
+            "subheading": "This section can be used to organize page content into different areas, or along with the Collage section to create a magazine-style layout.",
+            "text_max_width": 30,
+            "link": "#",
+            "link_text": "Try it out",
+            "link_style": "button",
+            "horizontal_text_position": "center",
+            "vertical_text_position": "middle"
+          }
+        },
+        "dynamic-collage-2": {
+          "type": "dynamic-collage",
+          "blocks": {
+            "dynamic-collage-2-2": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "large",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "",
+                "subheading": "",
+                "text_max_width": 19,
+                "link": "",
+                "link_text": "",
+                "link_style": "button",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            },
+            "dynamic-collage-2-1": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "large",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "",
+                "subheading": "",
+                "text_max_width": 19,
+                "link": "",
+                "link_text": "",
+                "link_style": "button",
+                "horizontal_text_position": "center",
+                "vertical_text_position": "top"
+              }
+            },
+            "dynamic-collage-2-0": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "small",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "This is a small landscape block",
+                "subheading": "Mix and match between large portrait blocks and small landscape blocks.",
+                "text_max_width": 20,
+                "link": "#",
+                "link_text": "Don't forget to add a link or two",
+                "link_style": "arrow_link",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "top"
+              }
+            },
+            "dynamic-collage-2-3": {
+              "type": "grid_item",
+              "settings": {
+                "image": "",
+                "size": "small",
+                "video_url": "",
+                "overlay_opacity": 50,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "heading": "Have control over your content",
+                "subheading": "Use text placement and max width options to fine tune your call to action.",
+                "text_max_width": 19,
+                "link": "#",
+                "link_text": "Don't forget to add a link or two",
+                "link_style": "arrow_link",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "top"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-collage-2-2",
+            "dynamic-collage-2-1",
+            "dynamic-collage-2-0",
+            "dynamic-collage-2-3"
+          ],
+          "settings": {}
+        },
+        "dynamic-newsletter": {
+          "type": "dynamic-newsletter",
+          "settings": {
+            "title": "Newsletters can reinforce your brand",
+            "subheading": "<p>Include a short sentence describing what someone can expect from your newsletter.<\/p>",
+            "outline": false
+          }
+        },
+        "dynamic-full-width-image-3": {
+          "type": "dynamic-full-width-image",
+          "settings": {
+            "image": "",
+            "overlay_opacity": 50,
+            "overlay_color": "#707070",
+            "text_color": "#ffffff",
+            "title": "Full width image section",
+            "subheading": "",
+            "text_max_width": 16,
+            "link": "#",
+            "link_text": "Try it out",
+            "link_style": "button",
+            "horizontal_text_position": "left",
+            "vertical_text_position": "middle"
+          }
+        }
+      },
+      "content_for_index": [
+        "dynamic-slideshow",
+        "dynamic-rich-text",
+        "dynamic-collage",
+        "dynamic-testimonials",
+        "dynamic-full-width-image",
+        "dynamic-featured-collection",
+        "dynamic-featured-collection-1",
+        "dynamic-full-width-image-2",
+        "dynamic-collage-2",
+        "dynamic-newsletter",
+        "dynamic-full-width-image-3",
+        "dynamic-social-icons"
+      ]
+    },
+    "Essential": {
+      "color_accent": "#a09b9a",
+      "color_text": "#3d3d3d",
+      "color_meta_text": "#757575",
+      "color_button_text": "#ffffff",
+      "color_bg": "#ffffff",
+      "color_border": "#e2e2e2",
+      "color_input": "#ffffff",
+      "color_input_text": "#363636",
+      "color_secondary_button": "#f8f8f8",
+      "color_secondary_button_text": "#50906c",
+      "color_sale_badge": "#b6534c",
+      "color_success_message": "#82b875",
+      "color_error_message": "#b6534c",
+      "color_header_text": "#363636",
+      "color_header_bg": "#ffffff",
+      "color_header_border": "#e2e2e2",
+      "color_header_icon": "#9a9a9a",
+      "color_contrast_text": "#363636",
+      "color_contrast_meta_text": "#707070",
+      "color_contrast_bg": "#f7f5f5",
+      "color_contrast_border": "#e2e2e2",
+      "color_contrast_input": "#ffffff",
+      "color_contrast_input_text": "#363636",
+      "color_navigation_text": "#ffffff",
+      "color_navigation_meta_text": "#6c9384",
+      "color_navigation_bg": "#354b42",
+      "color_navigation_border": "#506a5f",
+      "color_navigation_feature": "#26352f",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_meta_text": "#8a8a8a",
+      "color_drawer_bg": "#212121",
+      "color_drawer_border": "#434343",
+      "color_footer_text": "#ffffff",
+      "color_footer_meta_text": "#cfeee2",
+      "color_footer_bg": "#2f4b40",
+      "color_footer_border": "#4b655b",
+      "color_footer_input": "#ffffff",
+      "color_footer_input_text": "#757575",
+      "font_heading": "agmena_n4",
+      "size_heading": 16,
+      "uppercase_headings": false,
+      "font_body": "assistant_n4",
+      "size_body": 16,
+      "font_logo": "agmena_n7",
+      "font_logo_size": 32,
+      "share_image": "",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "cart_notes_enable": true,
+      "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+      "currency_format": "money_with_currency_format",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "sections": {
+        "dynamic-featured-product": {
+          "type": "dynamic-featured-product",
+          "settings": {
+            "product": "",
+            "show_vendor": true,
+            "show_share_buttons": false,
+            "enable_payment_button": true,
+            "outline": false
+          }
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "blocks": {
+            "static-footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "static-footer-1": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "static-footer-2": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "static-footer-3": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "static-footer-0",
+            "static-footer-1",
+            "static-footer-2",
+            "static-footer-3"
+          ],
+          "settings": {
+            "show_newsletter_signup": true,
+            "show_payment_icons": true
+          }
+        },
+        "static-header": {
+          "type": "static-header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 120,
+            "transparent_header_foreground_color": "#ffffff",
+            "transparent_header_border_color": "#ffffff",
+            "transparent_header_border_opacity": 30,
+            "transparent_header_logo": ""
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "enable_payment_button": false
+          }
+        },
+        "static-recently-viewed": {
+          "type": "static-recently-viewed",
+          "settings": {
+            "enabled": true,
+            "title": "Recently Viewed",
+            "alignment": "above",
+            "rows": 1,
+            "per_row": 4,
+            "outline": false
+          }
+        },
+        "static-collection": {
+          "type": "static-collection",
+          "settings": {
+            "show_collection_image": true
+          }
+        },
+        "dynamic-featured-collection": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "center",
+            "products_per_row": 4,
+            "rows": 2,
+            "outline": false
+          }
+        },
+        "dynamic-featured-collection-1": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "left",
+            "products_per_row": 3,
+            "rows": 1,
+            "outline": false
+          }
+        },
+        "dynamic-featured-collection-2": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "collection_subheading": "Add a subheading to provide more details about this collection.",
+            "link_text": "",
+            "heading_alignment": "left",
+            "products_per_row": 3,
+            "rows": 1,
+            "outline": false
+          }
+        },
+        "dynamic-newsletter": {
+          "type": "dynamic-newsletter",
+          "settings": {
+            "title": "Newsletters can reinforce your brand",
+            "subheading": "<p>Include a short sentence describing what someone can expect from your newsletter.<\/p>",
+            "outline": false
+          }
+        },
+        "static-contact": {
+          "type": "static-contact",
+          "settings": {
+            "heading": "Email us",
+            "subheading": "<p>Send us an email through the form. We usually respond within one business day.<\/p>"
+          }
+        },
+        "static-article": {
+          "type": "static-article",
+          "settings": {
+            "overlay_opacity": 20,
+            "overlay_color": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "dynamic-slideshow": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-0": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "video_url": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 20,
+                "overlay_color": "#a09b9a",
+                "text_color": "#ffffff",
+                "heading_max_width": 18,
+                "text_max_width": 34,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "bottom"
+              }
+            },
+            "dynamic-slideshow-1": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "video_url": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "shopify:\/\/collections",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 20,
+                "overlay_color": "#a09b9a",
+                "text_color": "#ffffff",
+                "heading_max_width": 16,
+                "text_max_width": 24,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-0",
+            "dynamic-slideshow-1"
+          ],
+          "settings": {
+            "aspect_ratio": "full_height"
+          }
+        },
+        "dynamic-rich-text": {
+          "type": "dynamic-rich-text",
+          "settings": {
+            "text": "<p>Use this text area to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "dynamic-text-columns-with-images": {
+          "type": "dynamic-text-columns-with-images",
+          "blocks": {
+            "dynamic-text-columns-with-images-0": {
+              "type": "column",
+              "settings": {
+                "image": "",
+                "image_max_width": 100,
+                "title": "Text Column",
+                "subheading": "These text columns are great for showing off features or policies (such as shipping or return policy). Attach an image or an icon for more visual interest.",
+                "link": "",
+                "link_text": "Read more"
+              }
+            },
+            "dynamic-text-columns-with-images-1": {
+              "type": "column",
+              "settings": {
+                "image": "",
+                "image_max_width": 100,
+                "title": "Text Column",
+                "subheading": "These text columns are great for showing off features or policies (such as shipping or return policy). Attach an image or an icon for more visual interest.",
+                "link": "",
+                "link_text": "Read more"
+              }
+            },
+            "dynamic-text-columns-with-images-2": {
+              "type": "column",
+              "settings": {
+                "image": "",
+                "image_max_width": 100,
+                "title": "Text Column",
+                "subheading": "These text columns are great for showing off features or policies (such as shipping or return policy). Attach an image or an icon for more visual interest.",
+                "link": "",
+                "link_text": "Read more"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-text-columns-with-images-0",
+            "dynamic-text-columns-with-images-1",
+            "dynamic-text-columns-with-images-2"
+          ],
+          "settings": {
+            "title": "",
+            "subheading": "",
+            "outline": false
+          }
+        },
+        "dynamic-testimonials": {
+          "type": "dynamic-testimonials",
+          "blocks": {
+            "dynamic-testimonials-0": {
+              "type": "testimonial",
+              "settings": {
+                "icon": "",
+                "quote": "“Absolutely unparalleled products and service. I'm confident that this store will be the next big thing in its industry, and that its products will be timeless.”",
+                "author": "Steve Jordans"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-testimonials-0"
+          ],
+          "settings": {
+            "icon_width": 40,
+            "outline": false
+          }
+        },
+        "dynamic-slideshow-3": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-3-0": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "video_url": "",
+                "title": "This is your slideshow",
+                "subheading": "",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 20,
+                "overlay_color": "#a09b9a",
+                "text_color": "#ffffff",
+                "heading_max_width": 14,
+                "text_max_width": 19,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-3-0"
+          ],
+          "settings": {
+            "aspect_ratio": "full_height"
+          }
+        },
+        "dynamic-slideshow-2": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-2-0": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "video_url": "",
+                "title": "This is your slideshow",
+                "subheading": "",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 20,
+                "overlay_color": "#a09b9a",
+                "text_color": "#ffffff",
+                "heading_max_width": 17,
+                "text_max_width": 24,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-2-0"
+          ],
+          "settings": {
+            "aspect_ratio": "full_height"
+          }
+        },
+        "dynamic-slideshow-1": {
+          "type": "dynamic-slideshow",
+          "blocks": {
+            "dynamic-slideshow-1-0": {
+              "type": "slide",
+              "settings": {
+                "image": "",
+                "video_url": "",
+                "title": "This is your slideshow",
+                "subheading": "Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.",
+                "link": "#",
+                "link_text": "Shop now",
+                "link_style": "button",
+                "overlay_opacity": 20,
+                "overlay_color": "#a09b9a",
+                "text_color": "#ffffff",
+                "heading_max_width": 17,
+                "text_max_width": 27,
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-slideshow-1-0"
+          ],
+          "settings": {
+            "aspect_ratio": "full_height"
+          }
+        },
+        "dynamic-video": {
+          "type": "dynamic-video",
+          "settings": {
+            "title": "Featured Video",
+            "subheading": "Include a short video that introduces your product, your store or your brand.",
+            "meta": "",
+            "video_url": "",
+            "image": "",
+            "overlay_opacity": 20,
+            "overlay_color": "",
+            "text_color": ""
+          }
+        },
+        "static-features": {
+          "type": "static-features",
+          "blocks": {
+            "static-features-0": {
+              "type": "column",
+              "settings": {
+                "image": "",
+                "image_max_width": 100,
+                "title": "Text Column",
+                "subheading": "These text columns are great for showing off features or policies (such as shipping or return policy). Attach an image or an icon for more visual interest.",
+                "link": "#",
+                "link_text": "Read more"
+              }
+            },
+            "static-features-1": {
+              "type": "column",
+              "settings": {
+                "image": "",
+                "image_max_width": 100,
+                "title": "Text Column",
+                "subheading": "These text columns are great for showing off features or policies (such as shipping or return policy). Attach an image or an icon for more visual interest.",
+                "link": "#",
+                "link_text": "Read more"
+              }
+            },
+            "static-features-2": {
+              "type": "column",
+              "settings": {
+                "image": "",
+                "image_max_width": 100,
+                "title": "Text Column",
+                "subheading": "These text columns are great for showing off features or policies (such as shipping or return policy). Attach an image or an icon for more visual interest.",
+                "link": "#",
+                "link_text": "Read more"
+              }
+            }
+          },
+          "block_order": [
+            "static-features-0",
+            "static-features-1",
+            "static-features-2"
+          ],
+          "settings": {
+            "outline": false
+          }
+        },
+        "static-full-width-features": {
+          "type": "static-full-width-features",
+          "blocks": {
+            "static-full-width-features-1": {
+              "type": "feature",
+              "settings": {
+                "image": "",
+                "overlay_opacity": 40,
+                "overlay_color": "#000000",
+                "text_color": "#ffffff",
+                "title": "Full width image section",
+                "subheading": "This section can be used to parse page content into distinct areas or in conjunction with the Collage to create an editorial-style layout.",
+                "text_max_width": 25,
+                "link": "#",
+                "link_text": "",
+                "link_style": "button",
+                "horizontal_text_position": "left",
+                "vertical_text_position": "middle"
+              }
+            }
+          },
+          "block_order": [
+            "static-full-width-features-1"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "dynamic-slideshow",
+        "dynamic-rich-text",
+        "dynamic-text-columns-with-images",
+        "dynamic-featured-collection",
+        "dynamic-slideshow-1",
+        "dynamic-featured-product",
+        "dynamic-slideshow-2",
+        "dynamic-featured-collection-1",
+        "dynamic-testimonials",
+        "dynamic-featured-collection-2",
+        "dynamic-slideshow-3",
+        "dynamic-video"
+      ]
+    }
+  }
+}

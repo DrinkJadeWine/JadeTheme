@@ -1,0 +1,20 @@
+{
+  "name": "drinkjade",
+  "version": "1.0.0",
+  "description": "Theme for drinkjade.co",
+  "dependencies": {
+    "@shopify/themekit": "^1.1.7",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "browser-sync": "^2.26.14"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC"
+}
