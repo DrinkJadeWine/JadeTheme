@@ -15,6 +15,7 @@ export function browserSyncServer() {
         cors: true,
         ghostMode: false, // No clicks, form events and scrolling will be synced.
         notify: false,
+        reloadDelay: 1500,
         proxy: {
             target: `${TARGET_URL}?preview_theme_id=${themeId}`,
             ws: true,
