@@ -142,6 +142,10 @@
     {{ 'index.css' | asset_url | stylesheet_tag }}
     {{ 'shopify.css' | asset_url | stylesheet_tag }}
 
+    {% if template.name == 'index' %}
+      {{ 'landing.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+
     {{ content_for_header }}
   </head>
 
