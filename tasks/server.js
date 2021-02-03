@@ -2,7 +2,7 @@ import browserSync from 'browser-sync'
 import themeKit from '@shopify/themekit'
 import path from 'path'
 
-const browser = browserSync.create()
+export const browser = browserSync.create()
 
 var TARGET_URL = 'https://drinkjade.co'
 

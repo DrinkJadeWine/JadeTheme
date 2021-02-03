@@ -10,7 +10,9 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/register": "^7.12.10",
-    "browser-sync": "^2.26.14"
+    "browser-sync": "^2.26.14",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
   },
   "scripts": {
     "dev": "gulp"
