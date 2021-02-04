@@ -1,38 +1,8 @@
-{%- assign font_logo_size = settings.font_logo_size | append: 'px' -%}
-
 {% assign s = section.settings %}
 {% assign links = linklists[s.menu].links %}
 
-{% assign header_is_transparent = false %}
-
-{% if s.transparent_index_header_enabled and template.name == "index" %}
-{% assign header_is_transparent = true %}
-{% endif %}
-
-{% if s.transparent_about_header_enabled and template.suffix == "about" %}
-{% assign header_is_transparent = true %}
-{% endif %}
-
-{% assign header_modifier = "header--default" %}
-{% if s.header_style == "icon" %}
-{% assign header_modifier = "header--always-mobile" %}
-{% endif %}
-
-{% if header_is_transparent %}
-{% assign header_modifier = header_modifier | append: " header--transparent" %}
-{% endif %}
-
-<script>
-  window.theme.quickCartNote = {{ settings.quick_cart_note | json }};
-</script>
-
-{% assign center_header = false %}
-{% if s.header_alignment == "center" %}
-{% assign center_header = true %}
-{% endif %}
-
 <section data-component="header" data-section-id="{{ section.id }}" data-section-type="header"
-  class="{% unless header_is_transparent %}bg-base {% endunless %} w-100 z-5" data-navigation='
+  data-navigation='
     [
       {%- for link in links -%}
         {
@@ -81,186 +51,24 @@
       {%- endfor -%}
     ]
   '>
-  <div id="header" class="header {{ header_modifier }}" data-transparent-header="{{ header_is_transparent }}">
-    <div class="
-    header__content
-    {% if center_header %}header__content--centered{% endif %}
-    {% if shop.customer_accounts_enabled %}header__content--has-customer-accounts{% endif %}
-  ">
-      <div id="mobile-nav">
-        <div class="header__menu-icon">
-          {% render 'icon' with icon: 'menu' %}
-        </div>
-      </div>
-      <h1 class="header__logo-wrapper">
-        <a href="{{ routes.root_url }}" class="header__logo-image color-inherit">
-          {% if header_is_transparent and s.transparent_header_logo != blank %}
-          {% capture image_size %}{{ s.logo_max_width }}x{% endcapture %}
-          <img src="{{ s.transparent_header_logo | img_url: image_size }}"
-            srcset="{{ s.transparent_header_logo | img_url: image_size }} 1x, {{ s.transparent_header_logo | img_url: image_size, scale: 2 }} 2x"
-            alt="{{ s.transparent_header_logo.alt | default: shop.name }}">
-
-          {% else %}
-
-          {% if s.logo != blank %}
-          {% capture image_size %}{{ s.logo_max_width }}x{% endcapture %}
-          <img src="{{ s.logo | img_url: image_size }}"
-            srcset="{{ s.logo | img_url: image_size }} 1x, {{ s.logo | img_url: image_size, scale: 2 }} 2x"
-            alt="{{ s.logo.alt | default: shop.name }}">
-
-          {% else %}
-
-          <span class="header__logo-text">{{ shop.name }}</span>
-
-          {% endif %}
-
-          {% endif %}
+  <nav>
+    <div class="nav-links">
+      {% for link in links %}
+        <a class="nav-link" href="{{ link.url }}">
+          {{ link.title }}
         </a>
-      </h1>
-
-      <div class="header__sticky-logo-wrapper">
-        {%- unless s.sticky_header_logo == blank -%}
-        <a href="{{ routes.root_url }}" class="header__sticky-logo-image color-inherit">
-          <img src="{{ s.sticky_header_logo | img_url: x50 }}"
-            srcset="{{ s.sticky_header_logo | img_url: x50 }} 1x, {{ s.sticky_header_logo | img_url: x50, scale: 2 }} 2x"
-            alt="{{ s.sticky_header_logo.alt | default: shop.name }}">
-        </a>
-        {%- endunless -%}
-      </div>
-
-      <div class="flex justify-between" data-primary-navigation="yes">
-        <nav class="header__nav">
-          {%
-          render 'navmenu' with
-          menu: s.menu,
-          depth: 1,
-          max_depth: 3,
-          blocks: section.blocks,
-          top_level: true,
-          has_triggers: true
-          %}
-        </nav>
-        <div class="no-js-menu no-js-menu--desktop">
-          {% render 'no-js-navmenu' with menu: s.menu %}
-        </div>
-
-        <div class="header__icon-wrapper">
-          <ul class="header__icon-list">
-            <li class="header__icon header__icon--search">
-              <noscript>
-                <a href="{{ routes.search_url }}" class="color-inherit">
-                  <div class="relative" style="width: 24px;">
-                    {% render 'icon-search' %}
-                  </div>
-                </a>
-              </noscript>
-              {% render 'quick-search' %}
-            </li>
-            {%- if shop.customer_accounts_enabled -%}
-            <li class="header__icon header__icon--account">
-              <a href="{{ routes.account_url }}" class="color-inherit">
-                <div class="relative" style="width: 24px;">
-                  {% render 'icon-account' %}
-                </div>
-              </a>
-            </li>
-            {%- endif -%}
-            <li class="header__icon header__icon--cart">
-              <a href="{{ routes.cart_url }}" class="color-inherit js-cart-drawer-toggle">
-                <div class="quick-cart__icon" style="width: 24px;">
-                  {% render 'icon-cart' %}
-                  <div class="quick-cart__indicator js-cart-count">
-                    {{ cart.item_count }}
-                  </div>
-                  {% render 'component-quick-cart' %}
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
     </div>
-    <div class="no-js-menu no-js-menu--mobile">
-      {% render 'no-js-navmenu' with menu: s.menu %}
-    </div>
-  </div>
 
+    <div class="logo">
+      LOGO
+    </div>
+
+    <div class="header-icons">
+      ICONS
+    </div>
+  </nav>
 </section>
-
-{% assign proper_alpha = s.transparent_header_border_opacity | divided_by: 100.00 %}
-
-<style>
-  .header__logo-text {
-    font-size: {
-        {
-        font_logo_size
-      }
-    }
-
-    ;
-  }
-
-  .header.header--transparent {
-    border-color: {
-        {
-        s.transparent_header_border_color | color_modify: 'alpha', proper_alpha
-      }
-    }
-
-    ;
-
-    color: {
-        {
-        s.transparent_header_foreground_color
-      }
-    }
-
-    ;
-  }
-
-  .header.header--transparent .header__icon-wrapper,
-  .header.header--transparent #mobile-nav {
-    color: {
-        {
-        s.transparent_header_foreground_color
-      }
-    }
-
-    ;
-  }
-
-    {
-    % if header_is_transparent %
-  }
-
-  .header-section {
-    position: absolute;
-  }
-
-    {
-    % endif %
-  }
-
-    {
-    % if s.logo !=blank %
-  }
-
-  .header__logo-image {
-    display: block;
-
-    max-width: {
-        {
-        s.logo_max_width
-      }
-    }
-
-    px;
-  }
-
-    {
-    % endif %
-  }
-</style>
 
 {% schema %}
 {

@@ -1,0 +1,15 @@
+.header-container {
+  background-color: #022826;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal; }
+  .header-container nav {
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .header-container nav .nav-links {
+      display: flex;
+      flex-direction: row; }
+      .header-container nav .nav-links a.nav-link:not(:first-child) {
+        margin-left: 3rem; }
