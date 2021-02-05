@@ -1,0 +1,28 @@
+<section data-section-id="{{ section.id }}">
+    <div class="video-container">
+        <video
+            id="video"
+            class="video-js"
+            preload="auto"
+            width="800"
+            height="480"
+            controls
+            poster="{{ 'jade-poster.jpg' | asset_url }}"
+            data-setup="{}"
+            >
+            <source src="{{ 'demo.webm' | asset_url }}" type="video/mp4" />
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a
+                >
+            </p>
+        </video>
+
+        <div class="video-text">
+            <h2>It's fun if Rose is involved</h2>
+            <p>Smooth opulent layers sof fresh fruit, savory notes of strawberries, and a balanced blend of perfectly aromatic white peaches. Embodied by a seductively floral and suprisingly light finish.</p>
+        </div>
+    </div>
+</section>

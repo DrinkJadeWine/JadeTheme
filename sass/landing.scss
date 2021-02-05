@@ -58,11 +58,9 @@ h1 {
 }
 
 .collection-container {
-    display: flex;
-    align-items: center;
+    @include section;
     flex-direction: column;
-    padding: 2rem 3rem 7rem;
-    background-color: $white20;
+    padding-bottom: 7rem;
 
     .products {
         display: flex;
@@ -86,5 +84,48 @@ h1 {
 
 .section-delimeter {
     margin: 0 4rem;
-    border-bottom: 1px solid $white20;
+    height: 2px;
+    background-color: $white20;
+}
+
+.video-container {
+    @include section;
+
+    flex-direction: column;
+
+    .video-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 800px;
+
+        h2, p {
+            flex: 1
+        }
+    }
+}
+
+.video-js {
+    background-color: $white10;
+
+    .vjs-poster {
+        background-color: $white10;
+    }
+
+    .vjs-big-play-button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $green;
+
+        .vjs-icon-placeholder:before {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+        }
+    }
 }

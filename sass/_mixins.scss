@@ -1,3 +1,13 @@
+@import "variables";
+
 @mixin spacing-bottom {
     margin-bottom: 2rem;
+}
+
+@mixin section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white10;
+    padding: 3rem;
 }

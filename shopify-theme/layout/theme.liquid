@@ -144,6 +144,7 @@
     {{ 'main.css' | asset_url | stylesheet_tag }}
 
     {% if template.name == 'index' %}
+      <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
       {{ 'landing.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
@@ -167,6 +168,9 @@
 
     {{ '//www.youtube.com/iframe_api' | script_tag }}
     {{ '//cdn.shopify.com/shopifycloud/shopify-plyr/v1.0/shopify-plyr.css' | stylesheet_tag }}
+    {% if template.name == "index" %}
+    {{ '//vjs.zencdn.net/7.10.2/video.min.js' | script_tag }}
+    {% endif %}
     <script src='{{ 'index.js' | asset_url }}' defer='defer'></script>
   </body>
 </html>
