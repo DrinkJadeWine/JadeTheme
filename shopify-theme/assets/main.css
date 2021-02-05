@@ -1,3 +1,6 @@
+body {
+  background-color: #E0DFDC; }
+
 .header-container {
   background-color: #022826;
   color: #fff;
@@ -8,8 +11,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .header-container nav .nav-links {
+    .header-container nav .menu {
       display: flex;
       flex-direction: row; }
-      .header-container nav .nav-links a.nav-link:not(:first-child) {
+      .header-container nav .menu a.nav-link:not(:first-child) {
         margin-left: 3rem; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 2.5rem; }

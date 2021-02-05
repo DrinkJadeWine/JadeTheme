@@ -19,8 +19,6 @@ h1 {
       top: 1rem;
       width: 100%;
       height: 400px; }
-  .hero-container .right h1 {
-    font-size: 4rem; }
 
 .mb {
   margin-bottom: 2rem; }
@@ -31,7 +29,35 @@ h1 {
   text-transform: uppercase;
   padding: 1rem 3rem;
   font-size: 1.25rem;
-  font-weight: normal; }
+  font-weight: normal;
+  cursor: pointer; }
   .button.light {
     background-color: #fff;
     color: #000000; }
+  .button.dark {
+    background-color: #000000;
+    color: #fff; }
+
+.collection-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 3rem 7rem;
+  background-color: #E0DFDC; }
+  .collection-container .products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
+    .collection-container .products .product-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1rem; }
+      .collection-container .products .product-tile .product-description {
+        line-height: 3rem;
+        font-weight: normal;
+        text-align: center; }
+
+.section-delimeter {
+  margin: 0 4rem;
+  border-bottom: 1px solid #E0DFDC; }

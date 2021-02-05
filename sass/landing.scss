@@ -10,7 +10,7 @@ h1 {
     align-items: center;
     flex-direction: row;
     background-color: $green;
-    color: $white;
+    color: $white00;
     padding: 0 5rem 5rem;
 
     .left, .right {
@@ -31,12 +31,6 @@ h1 {
             }
         }
     }
-
-    .right {
-        h1 {
-            font-size: 4rem;
-        }
-    }
 }
 
 .mb {
@@ -50,9 +44,47 @@ h1 {
     padding: 1rem 3rem;
     font-size: 1.25rem;
     font-weight: normal;
+    cursor: pointer;
 
     &.light {
-        background-color: $white;
+        background-color: $white00;
         color: $dark;
     }
+    
+    &.dark {
+        background-color: $dark;
+        color: $white00;
+    }
+}
+
+.collection-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 3rem 7rem;
+    background-color: $white20;
+
+    .products {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .product-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 1rem;
+
+            .product-description {
+                line-height: 3rem;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.section-delimeter {
+    margin: 0 4rem;
+    border-bottom: 1px solid $white20;
 }
