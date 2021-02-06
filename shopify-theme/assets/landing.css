@@ -76,27 +76,23 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 800px; }
+    width: 1024px; }
     .video-container .video-text h2, .video-container .video-text p {
       flex: 1; }
 
-.video-js {
-  background-color: #EBEAE7; }
-  .video-js .vjs-poster {
-    background-color: #EBEAE7; }
-  .video-js .vjs-big-play-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    left: 50%;
+.video-js .vjs-big-play-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #022826; }
+  .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
     top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #022826; }
-    .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -25%); }
+    left: 50%;
+    transform: translate(-50%, -25%); }
 
 .pros-container {
   display: flex;
