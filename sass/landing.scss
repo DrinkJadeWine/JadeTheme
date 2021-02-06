@@ -205,3 +205,14 @@ h1 {
         }
     }
 }
+
+.cta-container {
+    @include section;
+
+    flex-direction: column;
+    padding-bottom: 5rem;
+
+    h2 {
+        font-size: 4rem;
+    }
+}
