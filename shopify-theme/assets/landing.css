@@ -44,6 +44,7 @@ h1 {
   align-items: center;
   background-color: #EBEAE7;
   padding: 3rem 4rem;
+  font-weight: normal;
   flex-direction: column;
   padding-bottom: 7rem; }
   .collection-container .products {
@@ -71,6 +72,7 @@ h1 {
   align-items: center;
   background-color: #EBEAE7;
   padding: 3rem 4rem;
+  font-weight: normal;
   flex-direction: column; }
   .video-container .video-text {
     display: flex;
@@ -100,6 +102,7 @@ h1 {
   align-items: center;
   background-color: #EBEAE7;
   padding: 3rem 4rem;
+  font-weight: normal;
   flex-direction: row;
   font-weight: normal;
   justify-content: center; }
@@ -109,3 +112,39 @@ h1 {
     margin-left: 3rem; }
   .pros-container .pros-item {
     margin-top: 4rem; }
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEAE7;
+  padding: 3rem 4rem;
+  font-weight: normal;
+  background-color: #022826;
+  color: #fff;
+  padding: 5rem 4rem; }
+  .reviews-container .review-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .reviews-container .review-list .review-item {
+      display: flex;
+      width: 20%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
+      .reviews-container .review-list .review-item:not(:first-child) {
+        margin-left: 3rem; }
+      .reviews-container .review-list .review-item .reviewer-name {
+        text-transform: uppercase;
+        margin-top: 2rem; }
+      .reviews-container .review-list .review-item .review-text {
+        font-style: italic; }
+      .reviews-container .review-list .review-item .reviewer-verified {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        color: #7A7A7A;
+        font-size: 1rem; }
+        .reviews-container .review-list .review-item .reviewer-verified img {
+          margin-right: 0.5rem; }
