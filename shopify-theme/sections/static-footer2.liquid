@@ -1,0 +1,34 @@
+<footer
+  data-section-id="{{ section.id }}"
+  data-section-type="footer"
+>
+  <div class="footer-container">
+    <div class="footer-items"> 
+      <h2>Stay connected</h2> 
+      <p>We love making new friends. Subscribe to our newsletter for updates, new launches, discounts, and more.</p>
+      <form>
+        <input class="input" type="email" placeholder="YOUR EMAIL ADDRESS" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "{{ shop.name }}",
+  "sameAs": [
+    "{{ settings.social_twitter_link }}",
+    "{{ settings.social_facebook_link }}",
+    "{{ settings.social_pinterest_link }}",
+    "{{ settings.social_instagram_link }}",
+    "{{ settings.social_tumblr_link }}",
+    "{{ settings.social_snapchat_link }}",
+    "{{ settings.social_youtube_link }}",
+    "{{ settings.social_vimeo_link }}"
+  ],
+  "url": "{{ shop.url }}{{ page.url }}"
+}
+</script>
