@@ -148,3 +148,18 @@ h1 {
         font-size: 1rem; }
         .reviews-container .review-list .review-item .reviewer-verified img {
           margin-right: 0.5rem; }
+
+.instafeed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEAE7;
+  padding: 3rem 4rem;
+  font-weight: normal; }
+  .instafeed-container #insta-feed {
+    width: 100%; }
+    .instafeed-container #insta-feed h2 {
+      font-size: 5rem;
+      color: #D5869D;
+      text-transform: uppercase;
+      margin-top: 0; }

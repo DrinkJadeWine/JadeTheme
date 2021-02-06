@@ -190,3 +190,18 @@ h1 {
         }
     }
 }
+
+.instafeed-container {
+    @include section;
+
+    #insta-feed {
+        width: 100%;
+
+        h2 {
+            font-size: 5rem;
+            color: $pink;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+    }
+}
