@@ -43,7 +43,7 @@ h1 {
   justify-content: center;
   align-items: center;
   background-color: #EBEAE7;
-  padding: 3rem;
+  padding: 3rem 4rem;
   flex-direction: column;
   padding-bottom: 7rem; }
   .collection-container .products {
@@ -70,7 +70,7 @@ h1 {
   justify-content: center;
   align-items: center;
   background-color: #EBEAE7;
-  padding: 3rem;
+  padding: 3rem 4rem;
   flex-direction: column; }
   .video-container .video-text {
     display: flex;
@@ -97,3 +97,19 @@ h1 {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -25%); }
+
+.pros-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEAE7;
+  padding: 3rem 4rem;
+  flex-direction: row;
+  font-weight: normal;
+  justify-content: center; }
+  .pros-container .pros-list {
+    width: 30%; }
+  .pros-container .pros-image {
+    margin-left: 3rem; }
+  .pros-container .pros-item {
+    margin-top: 4rem; }

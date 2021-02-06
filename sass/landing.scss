@@ -129,3 +129,23 @@ h1 {
         }
     }
 }
+
+.pros-container {
+    @include section;
+
+    flex-direction: row;
+    font-weight: normal;
+    justify-content: center;
+
+    .pros-list {
+        width: 30%;
+    }
+    
+    .pros-image {
+        margin-left: 3rem;
+    }
+
+    .pros-item {
+        margin-top: 4rem;
+    }
+}
