@@ -1,58 +1,27 @@
 {% assign s = section.settings %}
 {% assign links = linklists[s.menu].links %}
 
-<section data-component="header" data-section-id="{{ section.id }}" data-section-type="header"
-  data-navigation='
-    [
-      {%- for link in links -%}
-        {
-          "active": "{{ link.active }}",
-          "child_active": "{{ link.child_active }}",
-          "current": "{{ link.current }}",
-          "child_current": "{{ link.child_current }}",
-          "levels": "{{ link.levels }}",
-          "links": [
-            {%- for child in link.links -%}
-              {
-                "active": "{{ child.active }}",
-                "child_active": "{{ child.child_active }}",
-                "current": "{{ child.current }}",
-                "child_current": "{{ child.child_current }}",
-                "levels": "{{ child.levels }}",
-
-                  "links": [
-                    {%- for grandchild in child.links -%}
-                      {
-                        "active": "{{ grandchild.active }}",
-                        "child_active": "{{ grandchild.child_active }}",
-                        "current": "{{ grandchild.current }}",
-                        "child_current": "{{ grandchild.child_current }}",
-                        "levels": "{{ grandchild.levels }}",
-                        "title": "{{ grandchild.title | escape }}",
-                        "type": "{{ grandchild.type }}",
-                        "url": "{{ grandchild.url }}"
-                      }
-                      {% if forloop.last == false %},{% endif %}
-                    {%- endfor -%}
-                  ],
-                "title": "{{ child.title | escape }}",
-                "type": "{{ child.type }}",
-                "url": "{{ child.url }}"
-              }
-              {% if forloop.last == false %},{% endif %}
-            {%- endfor -%}
-          ],
-          "title": "{{ link.title | escape }}",
-          "type": "{{ link.type }}",
-          "url": "{{ link.url }}"
-        }
-
-        {% if forloop.last == false %},{% endif %}
-      {%- endfor -%}
-    ]
-  '>
-  <nav>
-
+<section data-component="header" data-section-id="{{ section.id }}" data-section-type="header">
+  <nav class="nav-mobile">
+    <div>
+        {% render 'hamburger' %}
+    </div>
+    <div class="logo">
+      {% render 'logo' with color: '#000000' %}
+    </div>
+    <div>
+      <a href="{{ routes.cart_url }}" class="color-inherit js-cart-drawer-toggle">
+        <div class="quick-cart__icon" style="width: 24px;">
+          {% render 'icon' with icon: 'cart' color: '#000000' %}
+          <div class="quick-cart__indicator js-cart-count">
+            {{ cart.item_count }}
+          </div>
+          {% render 'component-quick-cart' %}
+        </div>
+      </a>
+    </div>
+  </nav>
+  <nav class="nav-desktop">
     <div class="menu">
       {% for link in links %}
         <a class="nav-link" href="{{ link.url }}">
@@ -62,11 +31,20 @@
     </div>
 
     <div class="logo">
-      LOGO
+      {% render 'logo' with color: '#ffffff' %}
     </div>
 
     <div class="header-icons">
-      ICONS
+      {% render 'quick-search' %}
+      <a href="{{ routes.cart_url }}" class="color-inherit js-cart-drawer-toggle">
+        <div class="quick-cart__icon" style="width: 24px;">
+          {% render 'icon' with icon: 'cart' color: '#ffffff' %}
+          <div class="quick-cart__indicator js-cart-count">
+            {{ cart.item_count }}
+          </div>
+          {% render 'component-quick-cart' %}
+        </div>
+      </a>
     </div>
   </nav>
 </section>

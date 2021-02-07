@@ -12,3 +12,38 @@
     padding: 3rem 4rem;
     font-weight: normal;
 }
+
+// Small devices
+@mixin small {
+    @media (min-width: 576px) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin medium {
+    @media (min-width: 768px) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin large {
+    @media (min-width: 992px) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin extra-large {
+    @media (min-width: 1200px) {
+        @content;
+    }
+ }
+
+ // Custom devices
+@mixin custom($screen) {
+    @media (min-width: $screen) {
+        @content;
+    }
+ }

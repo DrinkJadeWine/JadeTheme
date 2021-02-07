@@ -169,6 +169,7 @@
     {{ '//cdn.shopify.com/shopifycloud/shopify-plyr/v1.0/shopify-plyr.css' | stylesheet_tag }}
     {% if template.name == "index" %}
     {{ '//vjs.zencdn.net/7.10.2/video.min.js' | script_tag }}
+    {{ 'video-layout.js' | asset_url | script_tag }}
     {% endif %}
     <script src='{{ 'index.js' | asset_url }}' defer='defer'></script>
   </body>

@@ -1,4 +1,6 @@
 @import "variables";
+@import "mixins";
+@import "hamburger";
 
 html, body {
     background-color: $white10;
@@ -6,15 +8,40 @@ html, body {
 
 .header-container {
     background-color: $green;
-    color: $white00;
     text-transform: uppercase;
     font-weight: normal;
     
-    nav {
-        padding: 3rem 4rem;
+    .nav-mobile {
+        z-index: $zIndexHeader;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+        color: $dark;
+        background-color: $white00;
+
+        @include medium {
+            display: none;
+        }
+    }
+    
+    .nav-desktop {
+        z-index: $zIndexHeader;
+        display: none;
+
+        @include medium {
+            display: flex;
+        }
+
+        color: $white00;
+        padding: 3rem 5rem;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
 
         .menu {
             display: flex;
@@ -26,13 +53,85 @@ html, body {
                 }
             }
         }
+
+        .header-icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                height: 18px;
+            }
+
+            div {
+                margin-right: 1.5rem;
+            }
+        }
     }
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+
+    @include medium {
+        font-size: 4rem;
+    }
 }
 
 h2 {
     font-size: 2.5rem;
+
+    @include medium {
+        font-size: 3rem;
+    }
+}
+
+.footer-container {
+    background-color: $green;
+    height: 300px;
+    padding: 5rem;
+    color: $white00;
+    font-weight: normal;
+
+    .footer-items {
+        width: 100%;
+
+        @include medium {
+            width: 380px;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            button {
+                background-color: transparent;
+                border: 0;
+                border-bottom: 1px solid $muted;
+                text-transform: uppercase;
+                color: $white00;
+                font-size: 1rem;
+                outline: none;
+            }
+        }
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    .input {
+        background-color: transparent;
+        color: $muted;
+        outline: none;
+        height: 25px;
+        font-weight: normal;
+        border-bottom: 1px solid $muted;
+        padding-left: 0;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 1rem;
+    }
 }
