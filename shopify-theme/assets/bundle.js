@@ -1,5 +1,32 @@
 "use strict";
 
+var drawerTrigger = document.getElementById('drawer-trigger');
+var closeTrigger = document.getElementById('drawer-close');
+var drawer = document.getElementById('drawer-menu'); // Drawer open
+
+if (drawerTrigger) {
+  drawerTrigger.onclick = function () {
+    var scrollY = window.pageYOffset;
+    drawer.classList.add('open');
+    setTimeout(function () {
+      document.body.style.position = 'fixed';
+      document.body.style.top = "".concat(scrollY, "px");
+    }, 400);
+  };
+} // Drawer close
+
+
+if (closeTrigger) {
+  closeTrigger.onclick = function () {
+    var scrollY = document.body.style.top;
+    drawer.classList.remove('open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0'));
+  };
+}
+"use strict";
+
 window.addEventListener('scroll', handleHeaderScroll);
 var lastScrollTop = 0;
 var delta = 5;

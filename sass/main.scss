@@ -22,11 +22,20 @@
     src: url("Butler_Bold.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Butler-Medium";
+    src: url("Butler_Medium.otf") format("opentype");
+}
+
 
 html, body {
     background-color: $white10;
     font-family: "AzoSans", sans-serif;
     font-weight: normal;
+}
+
+p {
+    font-family: "AzoSans", sans-serif;
 }
 
 header {
@@ -126,28 +135,29 @@ h2 {
             width: 380px;
         }
 
-
-        form {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-
-            button {
-                background-color: transparent;
-                border: 0;
-                border-bottom: 1px solid $muted;
-                text-transform: uppercase;
-                color: $white00;
-                font-size: 1rem;
-                outline: none;
-            }
-        }
     }
 
     h2 {
         margin: 0;
     }
 
+}
+
+form.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    button {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid $muted;
+        text-transform: uppercase;
+        color: $white00;
+        font-size: 1rem;
+        outline: none;
+    }
+    
     .input {
         background-color: transparent;
         color: $muted;
@@ -159,5 +169,61 @@ h2 {
         border-radius: 0;
         box-shadow: none;
         font-size: 1rem;
+    }
+}
+    
+.drawer-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $dark;
+    color: $white00;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+    z-index: $zIndexDrawer;
+    transition: transform 0.4s ease-in-out;
+    padding: 4rem;
+
+    &.open {
+        transform: translateX(0);
+    }
+
+    .drawer__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .drawer__body {
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .drawer__item {
+            margin-top: 2rem;
+            font-size: 4rem;
+
+            a {
+                font-family: 'Butler-Medium', sans-serif;
+            }
+
+            &.secondary {
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .drawer__footer {
+        width: 100%;
+        padding: 4rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
