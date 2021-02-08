@@ -1,6 +1,10 @@
 h1 {
   margin: 2rem 0; }
 
+@media (min-width: 768px) {
+  header {
+    background-color: #022826; } }
+
 .hero-container {
   flex-direction: column;
   padding-bottom: 5rem;
@@ -13,7 +17,8 @@ h1 {
     .hero-container {
       flex-direction: row;
       padding: 0 5rem 5rem;
-      text-align: left; } }
+      text-align: left;
+      margin-top: 92px; } }
   .hero-container .left, .hero-container .right {
     flex: 1; }
   .hero-container .left .image-backdrop {
@@ -43,7 +48,10 @@ h1 {
   margin-bottom: 2rem; }
 
 .button {
+  font-family: "AzoSans-Medium", sans-serif;
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   text-transform: uppercase;
   padding: 1rem 3rem;

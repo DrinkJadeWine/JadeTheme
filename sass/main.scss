@@ -2,27 +2,51 @@
 @import "mixins";
 @import "hamburger";
 
-html, body {
-    background-color: $white10;
+@font-face {
+    font-family: "AzoSans";
+    src: url("AzoSans-Regular.ttf") format("truetype");
 }
 
-.header-container {
-    background-color: $green;
-    text-transform: uppercase;
+@font-face {
+    font-family: "AzoSans-Medium";
+    src: url("AzoSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Butler-ExtraBold";
+    src: url("Butler_ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Butler-Bold";
+    src: url("Butler_Bold.otf") format("opentype");
+}
+
+
+html, body {
+    background-color: $white10;
+    font-family: "AzoSans", sans-serif;
     font-weight: normal;
+}
+
+header {
+    text-transform: uppercase;
+    font-family: "AzoSans", sans-serif;
+    letter-spacing: 2px;
+    z-index: $zIndexHeader;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.4s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.6);
     
     .nav-mobile {
-        z-index: $zIndexHeader;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 3rem;
         color: $dark;
-        background-color: $white00;
 
         @include medium {
             display: none;
@@ -71,7 +95,8 @@ html, body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-family: 'Butler-ExtraBold', sans-serif;
+    font-size: 2.8rem;
 
     @include medium {
         font-size: 4rem;
@@ -79,6 +104,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Butler-Bold', sans-serif;
     font-size: 2.5rem;
 
     @include medium {

@@ -5,6 +5,13 @@ h1 {
     margin: 2rem 0;
 }
 
+
+header {
+    @include medium {
+        background-color: $green;
+    }
+}
+
 .hero-container {
     flex-direction: column;
     padding-bottom: 5rem;
@@ -14,6 +21,7 @@ h1 {
         flex-direction: row;
         padding: 0 5rem 5rem;
         text-align: left;
+        margin-top: 92px;
     }
 
     display: flex;
@@ -64,6 +72,7 @@ h1 {
 }
 
 .button {
+    font-family: "AzoSans-Medium", sans-serif;
     display: flex;
     width: fit-content;
     text-transform: uppercase;

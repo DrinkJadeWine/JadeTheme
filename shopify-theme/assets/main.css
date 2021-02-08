@@ -1,5 +1,5 @@
 .hamburger {
-  padding: 15px 15px;
+  padding: 0 0;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -48,29 +48,48 @@
   .hamburger-inner::after {
     bottom: -10px; }
 
-html, body {
-  background-color: #EBEAE7; }
+@font-face {
+  font-family: "AzoSans";
+  src: url("AzoSans-Regular.ttf") format("truetype"); }
 
-.header-container {
-  background-color: #022826;
-  text-transform: uppercase;
+@font-face {
+  font-family: "AzoSans-Medium";
+  src: url("AzoSans-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Butler-ExtraBold";
+  src: url("Butler_ExtraBold.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Butler-Bold";
+  src: url("Butler_Bold.otf") format("opentype"); }
+
+html, body {
+  background-color: #EBEAE7;
+  font-family: "AzoSans", sans-serif;
   font-weight: normal; }
-  .header-container .nav-mobile {
-    z-index: 300;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+
+header {
+  text-transform: uppercase;
+  font-family: "AzoSans", sans-serif;
+  letter-spacing: 2px;
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.4s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.6); }
+  header .nav-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
-    color: #000000;
-    background-color: #fff; }
+    color: #000000; }
     @media (min-width: 768px) {
-      .header-container .nav-mobile {
+      header .nav-mobile {
         display: none; } }
-  .header-container .nav-desktop {
+  header .nav-desktop {
     z-index: 300;
     display: none;
     color: #fff;
@@ -79,29 +98,31 @@ html, body {
     justify-content: space-between;
     align-items: center; }
     @media (min-width: 768px) {
-      .header-container .nav-desktop {
+      header .nav-desktop {
         display: flex; } }
-    .header-container .nav-desktop .menu {
+    header .nav-desktop .menu {
       display: flex;
       flex-direction: row; }
-      .header-container .nav-desktop .menu a.nav-link:not(:first-child) {
+      header .nav-desktop .menu a.nav-link:not(:first-child) {
         margin-left: 3rem; }
-    .header-container .nav-desktop .header-icons {
+    header .nav-desktop .header-icons {
       display: flex;
       flex-direction: row;
       align-items: center; }
-      .header-container .nav-desktop .header-icons img {
+      header .nav-desktop .header-icons img {
         height: 18px; }
-      .header-container .nav-desktop .header-icons div {
+      header .nav-desktop .header-icons div {
         margin-right: 1.5rem; }
 
 h1 {
-  font-size: 3rem; }
+  font-family: 'Butler-ExtraBold', sans-serif;
+  font-size: 2.8rem; }
   @media (min-width: 768px) {
     h1 {
       font-size: 4rem; } }
 
 h2 {
+  font-family: 'Butler-Bold', sans-serif;
   font-size: 2.5rem; }
   @media (min-width: 768px) {
     h2 {

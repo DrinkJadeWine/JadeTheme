@@ -154,7 +154,7 @@
   <body class='{%- if settings.uppercase_headings -%}g-uppercase{%- endif -%} preload'>
 
     <main role='main' id='root'>
-      <header class="header-container" data-component="stickyHeader">
+      <header id="header" class="header-container" data-component="stickyHeader">
         {% section 'static-announcement-bar' %}
         {% section 'static-header' %}
       </header>
@@ -167,6 +167,7 @@
 
     {{ '//www.youtube.com/iframe_api' | script_tag }}
     {{ '//cdn.shopify.com/shopifycloud/shopify-plyr/v1.0/shopify-plyr.css' | stylesheet_tag }}
+    {{ 'header.js' | asset_url | script_tag }}
     {% if template.name == "index" %}
     {{ '//vjs.zencdn.net/7.10.2/video.min.js' | script_tag }}
     {{ 'video-layout.js' | asset_url | script_tag }}

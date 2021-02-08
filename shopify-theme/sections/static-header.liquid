@@ -4,47 +4,31 @@
 <section data-component="header" data-section-id="{{ section.id }}" data-section-type="header">
   <nav class="nav-mobile">
     <div>
-        {% render 'hamburger' %}
+      {% render 'hamburger' %}
     </div>
     <div class="logo">
       {% render 'logo' with color: '#000000' %}
     </div>
     <div>
-      <a href="{{ routes.cart_url }}" class="color-inherit js-cart-drawer-toggle">
-        <div class="quick-cart__icon" style="width: 24px;">
-          {% render 'icon' with icon: 'cart' color: '#000000' %}
-          <div class="quick-cart__indicator js-cart-count">
-            {{ cart.item_count }}
-          </div>
-          {% render 'component-quick-cart' %}
-        </div>
-      </a>
+      {% render 'cart-icon' with color: '#000000' %}
     </div>
   </nav>
   <nav class="nav-desktop">
     <div class="menu">
       {% for link in links %}
-        <a class="nav-link" href="{{ link.url }}">
-          {{ link.title }}
-        </a>
+      <a class="nav-link" href="{{ link.url }}">
+        {{ link.title }}
+      </a>
       {% endfor %}
     </div>
-
+    
     <div class="logo">
       {% render 'logo' with color: '#ffffff' %}
     </div>
-
+    
     <div class="header-icons">
-      {% render 'quick-search' %}
-      <a href="{{ routes.cart_url }}" class="color-inherit js-cart-drawer-toggle">
-        <div class="quick-cart__icon" style="width: 24px;">
-          {% render 'icon' with icon: 'cart' color: '#ffffff' %}
-          <div class="quick-cart__indicator js-cart-count">
-            {{ cart.item_count }}
-          </div>
-          {% render 'component-quick-cart' %}
-        </div>
-      </a>
+      {% render 'search-icon' with color: '#fff' %}
+      {% render 'cart-icon' with color: '#fff' %}
     </div>
   </nav>
 </section>
