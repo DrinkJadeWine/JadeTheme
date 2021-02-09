@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "hamburger";
+@import "helpers";
 
 @font-face {
     font-family: "AzoSans";
@@ -27,15 +28,18 @@
     src: url("Butler_Medium.otf") format("opentype");
 }
 
-
 html, body {
     background-color: $white10;
     font-family: "AzoSans", sans-serif;
     font-weight: normal;
 }
 
-p {
+p, span {
     font-family: "AzoSans", sans-serif;
+}
+
+#bag-trigger {
+    cursor: pointer;
 }
 
 header {
@@ -226,4 +230,113 @@ form.form {
         left: 0;
         bottom: 0;
     }
+}
+
+.bag-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: $zIndexDrawer;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    background-color: $dark;
+    color: $white00;
+    transition: transform 0.4s ease-in-out;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include medium {
+        width: 450px;
+    }
+
+    &.open {
+        transform: translateX(0);
+    }
+
+    .drawer__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .drawer__body {
+        margin-top: 2rem;
+
+        .drawer__item {
+            margin-top: 2rem;
+            border-top: 2px solid $muted;
+            padding-top: 2rem;
+            display: flex;    
+            align-items: center;
+
+            &:last-child {
+                border-bottom: 2px solid $muted;
+                padding-bottom: 2rem;
+            }
+
+            .drawer__item-image {
+                flex: 1;
+                // shift left because of the image size
+                position: relative;
+                left: -25px;
+            }
+
+            .drawer__item-info {
+                flex: 2;
+                // shift left because of the image size
+                position: relative;
+                left: -25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100px;
+            }
+
+            .drawer__item-price {
+                height: 100px;
+                justify-content: flex-start;
+            }
+        }
+
+        .count-modifier {
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    }
+
+    .cart-subtotal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .drawer__footer {
+        align-self: flex-end;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dashed {
+        width: 100%;
+        position: relative;
+        top: -4px;
+        border-bottom: 1px dashed $muted;
+    }
+
+    .small-text {
+        margin-top: 0.3rem;
+    }
+}
+
+.drawer-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: $zIndexDrawerOverlay;
 }

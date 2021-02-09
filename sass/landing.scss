@@ -74,12 +74,14 @@ header {
 .button {
     font-family: "AzoSans-Medium", sans-serif;
     display: flex;
-    width: fit-content;
     text-transform: uppercase;
     padding: 1rem 3rem;
     font-size: 1.25rem;
     font-weight: normal;
     cursor: pointer;
+    justify-content: center;
+    letter-spacing: 1px;
+    user-select: none;
 
     &.light {
         background-color: $white00;
@@ -89,6 +91,11 @@ header {
     &.dark {
         background-color: $dark;
         color: $white00;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
     }
 }
 

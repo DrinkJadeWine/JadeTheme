@@ -1,5 +1,5 @@
 const drawerTrigger = document.getElementById('drawer-trigger');
-const closeTrigger = document.getElementById('drawer-close')
+const closeTrigger = document.getElementById('drawer-close');
 const drawer = document.getElementById('drawer-menu');
 
 // Drawer open

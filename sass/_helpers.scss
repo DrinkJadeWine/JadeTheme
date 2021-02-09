@@ -1,0 +1,61 @@
+@import "variables";
+
+.underlined {
+    border-bottom: 2px solid $dark;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.small-text {
+    font-size: 1.1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fit-content {
+    width: fit-content;
+}

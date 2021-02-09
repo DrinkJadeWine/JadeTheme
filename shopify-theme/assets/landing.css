@@ -50,20 +50,26 @@ h1 {
 .button {
   font-family: "AzoSans-Medium", sans-serif;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   text-transform: uppercase;
   padding: 1rem 3rem;
   font-size: 1.25rem;
   font-weight: normal;
-  cursor: pointer; }
+  cursor: pointer;
+  justify-content: center;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .button.light {
     background-color: #fff;
     color: #000000; }
   .button.dark {
     background-color: #000000;
     color: #fff; }
+  .button.disabled {
+    cursor: not-allowed;
+    pointer-events: none; }
 
 .collection-container {
   display: flex;

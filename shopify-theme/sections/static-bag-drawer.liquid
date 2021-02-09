@@ -1,0 +1,87 @@
+<div class="drawer-overlay"></div>
+<div id="bag-drawer" class="bag-drawer">
+    <div>
+        <div class="drawer__header">
+            <div class="flex align-items-center">
+                <span class="mr-1">{% render 'cart-icon' with color: '#fff' %}</span>  <span>My Bag <span id="cart-total-count">({{ cart.item_count }})</span></span>
+            </div>
+            <div id="bag-close" class="pointer">
+                {% render 'icon' with icon: 'close' %}
+            </div>
+        </div>
+        <div class="drawer__body">
+            {% for item in cart.items %}
+                <div id="cart-item-{{ forloop.index }}" class="drawer__item">
+                    <div class="drawer__item-image">
+                        <img src="{{ item.product.images | first | image_url }}" alt="{{ item.product.title }}" />
+                    </div>
+                    <div class="drawer__item-info">
+                        <span>
+                            {{ item.product.title }}
+                        </span>
+                        <span>
+                            <span
+                                id="item-minus-{{ forloop.index }}"
+                                class="count-modifier"
+                                data-modifier-type="minus"
+                                data-item-quantity="{{ item.quantity }}"
+                                data-line="{{ forloop.index }}"
+                            >
+                            -
+                            </span>
+                            <span id="item-count-{{ forloop.index }}">
+                                {{ item.quantity }}
+                            </span>
+                            <span
+                                id="item-plus-{{ forloop.index }}"
+                                class="count-modifier"
+                                data-modifier-type="plus"
+                                data-item-quantity="{{ item.quantity }}"
+                                data-line="{{ forloop.index }}"
+                            >
+                                +
+                            </span>
+                            <span
+                                id="item-delete-{{ forloop.index }}"
+                                class="count-modifier ml-1"
+                                data-modifier-type="delete"
+                                data-item-quantity="{{ item.quantity }}"
+                                data-line="{{ forloop.index }}"
+                            >
+                                {% render 'trash-icon' %}
+                            </span>
+                        </span>
+                    </div>
+                    <div id="item-price-{{ forloop.index }}" class="drawer__item-price">
+                        {{ item.product.price | times: item.quantity | money }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if cart.item_count > 0 %}
+        <div class="cart-subtotal mt-2">
+            <div class="flex justify-content-between">
+                <span>Subtotal</span>
+                <span class="dashed"></span> 
+                <span class="cart-items-subtotal">{{ cart.items_subtotal_price | money }}</span>
+            </div>
+            <span class="small-text">Shipping & taxes calculated at checkout</span>
+        </div>
+        {% else %}
+        <div><span>Your cart is currently empty.</span></div>
+        {% endif %}
+    </div>
+
+    <div class="drawer__footer">
+        <a class="button light full-width {% if cart.item_count == 0 %}disabled{% endif %}" href="/checkout">
+            <span class="mr-1">
+                {% render 'lock-icon' %}
+            </span>
+            <span>
+                Checkout
+            </span>
+            <span class="ml-1 mr-1">-</span>
+            <span class="cart-items-subtotal">{{ cart.items_subtotal_price | money }}</span>
+        </a>
+    </div>
+</div>
