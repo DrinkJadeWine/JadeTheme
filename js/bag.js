@@ -81,7 +81,7 @@ function updateTotalCount(count) {
 }
 
 function updateSubTotal(subtotal) {
-    const subtotalElements = document.getElementsByClassName('cart-items-subtotal');
+    const subtotalElements = document.querySelectorAll('.cart-items-subtotal');
 
     subtotalElements.forEach(element => {
         element.textContent = Shopify.formatMoney(subtotal);

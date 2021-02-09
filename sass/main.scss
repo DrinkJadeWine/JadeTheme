@@ -36,9 +36,10 @@ html, body {
 
 p, span {
     font-family: "AzoSans", sans-serif;
+    letter-spacing: 1px;
 }
 
-#bag-trigger {
+.bag-trigger {
     cursor: pointer;
 }
 

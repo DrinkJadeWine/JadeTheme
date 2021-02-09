@@ -53,7 +53,9 @@
                         </span>
                     </div>
                     <div id="item-price-{{ forloop.index }}" class="drawer__item-price">
-                        {{ item.product.price | times: item.quantity | money }}
+                        <span>
+                            {{ item.product.price | times: item.quantity | money }}
+                        </span>
                     </div>
                 </div>
             {% endfor %}

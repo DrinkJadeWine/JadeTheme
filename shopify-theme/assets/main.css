@@ -121,9 +121,10 @@ html, body {
   font-weight: normal; }
 
 p, span {
-  font-family: "AzoSans", sans-serif; }
+  font-family: "AzoSans", sans-serif;
+  letter-spacing: 1px; }
 
-#bag-trigger {
+.bag-trigger {
   cursor: pointer; }
 
 header {

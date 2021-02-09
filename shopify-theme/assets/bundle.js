@@ -1,6 +1,6 @@
 "use strict";
 
-var bagTrigger = document.getElementById('bag-trigger');
+var bagTriggers = document.querySelectorAll('.bag-trigger') || [];
 var bagCloseTrigger = document.getElementById('bag-close');
 var bag = document.getElementById('bag-drawer');
 var drawerOverlay = document.querySelector('.drawer-overlay');
@@ -13,13 +13,13 @@ if (drawerOverlay) {
 } // Drawer open
 
 
-if (bagTrigger) {
-  bagTrigger.onclick = function () {
+bagTriggers.forEach(function (trigger) {
+  trigger.onclick = function () {
+    console.log('WTF?');
     bag.classList.add('open');
     drawerOverlay.style.display = 'block';
   };
-} // Drawer close
-
+}); // Drawer close
 
 if (bagCloseTrigger) {
   bagCloseTrigger.onclick = function () {
@@ -114,7 +114,7 @@ function updateTotalCount(count) {
 }
 
 function updateSubTotal(subtotal) {
-  var subtotalElements = document.getElementsByClassName('cart-items-subtotal');
+  var subtotalElements = document.querySelectorAll('.cart-items-subtotal');
   subtotalElements.forEach(function (element) {
     element.textContent = Shopify.formatMoney(subtotal);
   });

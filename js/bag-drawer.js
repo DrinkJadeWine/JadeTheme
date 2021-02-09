@@ -1,4 +1,4 @@
-const bagTrigger = document.getElementById('bag-trigger');
+const bagTriggers = document.querySelectorAll('.bag-trigger') || [];
 const bagCloseTrigger = document.getElementById('bag-close');
 const bag = document.getElementById('bag-drawer');
 const drawerOverlay = document.querySelector('.drawer-overlay')
@@ -11,12 +11,13 @@ if (drawerOverlay) {
 }
 
 // Drawer open
-if (bagTrigger) {
-    bagTrigger.onclick = function () {
+bagTriggers.forEach(trigger => {
+    trigger.onclick = function () {
+        console.log('WTF?')
         bag.classList.add('open');
         drawerOverlay.style.display = 'block';
     }
-}
+});
 
 // Drawer close
 if (bagCloseTrigger) {
