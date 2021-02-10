@@ -28,13 +28,15 @@
     src: url("Butler_Medium.otf") format("opentype");
 }
 
-html, body {
+html,
+body {
     background-color: $white10;
     font-family: "AzoSans", sans-serif;
     font-weight: normal;
 }
 
-p, span {
+p,
+span {
     font-family: "AzoSans", sans-serif;
     letter-spacing: 1px;
 }
@@ -43,18 +45,61 @@ p, span {
     cursor: pointer;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.button {
+    font-family: "AzoSans-Medium", sans-serif;
+    display: flex;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+    cursor: pointer;
+    justify-content: center;
+    letter-spacing: 1px;
+    user-select: none;
+
+    &.light {
+        background-color: $white00;
+        color: $dark;
+    }
+
+    &.dark {
+        background-color: $dark;
+        color: $white00;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
 header {
     text-transform: uppercase;
     font-family: "AzoSans", sans-serif;
     letter-spacing: 2px;
     z-index: $zIndexHeader;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    transition: top 0.4s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.6);
-    
+    background-color: $green;
+    position: relative;
+
+    .floating {
+        position: fixed;
+        top: -92px;
+        left: 0;
+        z-index: $zIndexHeader;
+        width: 100%;
+        transition: top 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.8);
+
+        .nav-desktop {
+            color: $dark;
+        }
+    }
+
     .nav-mobile {
         display: flex;
         justify-content: space-between;
@@ -66,7 +111,7 @@ header {
             display: none;
         }
     }
-    
+
     .nav-desktop {
         z-index: $zIndexHeader;
         display: none;
@@ -109,7 +154,7 @@ header {
 }
 
 h1 {
-    font-family: 'Butler-ExtraBold', sans-serif;
+    font-family: "Butler-ExtraBold", sans-serif;
     font-size: 2.8rem;
 
     @include medium {
@@ -118,7 +163,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Butler-Bold', sans-serif;
+    font-family: "Butler-Bold", sans-serif;
     font-size: 2.5rem;
 
     @include medium {
@@ -139,13 +184,11 @@ h2 {
         @include medium {
             width: 380px;
         }
-
     }
 
     h2 {
         margin: 0;
     }
-
 }
 
 form.form {
@@ -162,7 +205,7 @@ form.form {
         font-size: 1rem;
         outline: none;
     }
-    
+
     .input {
         background-color: transparent;
         color: $muted;
@@ -176,7 +219,7 @@ form.form {
         font-size: 1rem;
     }
 }
-    
+
 .drawer-menu {
     position: fixed;
     top: 0;
@@ -214,7 +257,7 @@ form.form {
             font-size: 4rem;
 
             a {
-                font-family: 'Butler-Medium', sans-serif;
+                font-family: "Butler-Medium", sans-serif;
             }
 
             &.secondary {
@@ -270,7 +313,7 @@ form.form {
             margin-top: 2rem;
             border-top: 2px solid $muted;
             padding-top: 2rem;
-            display: flex;    
+            display: flex;
             align-items: center;
 
             &:last-child {

@@ -9,7 +9,7 @@
                 {% render 'icon' with icon: 'close' %}
             </div>
         </div>
-        <div class="drawer__body">
+        <div id="bag-body" class="drawer__body">
             {% for item in cart.items %}
                 <div id="cart-item-{{ forloop.index }}" class="drawer__item">
                     <div class="drawer__item-image">
@@ -54,14 +54,14 @@
                     </div>
                     <div id="item-price-{{ forloop.index }}" class="drawer__item-price">
                         <span>
-                            {{ item.product.price | times: item.quantity | money }}
+                            {{ item.line_price | money }}
                         </span>
                     </div>
                 </div>
             {% endfor %}
         </div>
-        {% if cart.item_count > 0 %}
-        <div class="cart-subtotal mt-2">
+        
+        <div class="cart-subtotal mt-2 mb-2 {% if cart.item_count < 1 %}hidden{% endif %}">
             <div class="flex justify-content-between">
                 <span>Subtotal</span>
                 <span class="dashed"></span> 
@@ -69,21 +69,19 @@
             </div>
             <span class="small-text">Shipping & taxes calculated at checkout</span>
         </div>
-        {% else %}
-        <div><span>Your cart is currently empty.</span></div>
-        {% endif %}
+        <div class="empty-cart-text {% if cart.item_count > 0 %}hidden{% endif %}"><span>Your cart is currently empty.</span></div>
     </div>
 
     <div class="drawer__footer">
-        <a class="button light full-width {% if cart.item_count == 0 %}disabled{% endif %}" href="/checkout">
-            <span class="mr-1">
+        <a id="drawer-checkout-button" class="button light full-width {% if cart.item_count == 0 %}disabled{% endif %}" href="/checkout">
+            <span class="mr-1 align-self-center">
                 {% render 'lock-icon' %}
             </span>
-            <span>
+            <span class="align-self-center">
                 Checkout
             </span>
-            <span class="ml-1 mr-1">-</span>
-            <span class="cart-items-subtotal">{{ cart.items_subtotal_price | money }}</span>
+            <span class="ml-1 mr-1 align-self-center">-</span>
+            <span class="cart-items-subtotal align-self-center">{{ cart.items_subtotal_price | money }}</span>
         </a>
     </div>
 </div>

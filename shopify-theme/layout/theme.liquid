@@ -148,13 +148,17 @@
       {{ 'landing.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
+    {% if template.name == 'product' %}
+    {{ 'product.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+
     {{ content_for_header }}
   </head>
 
   <body class='{%- if settings.uppercase_headings -%}g-uppercase{%- endif -%} preload'>
 
     <main role='main' id='root'>
-      <header id="header" class="header-container" data-component="stickyHeader">
+      <header class="header-container">
         {% section 'static-announcement-bar' %}
         {% section 'static-header' %}
       </header>

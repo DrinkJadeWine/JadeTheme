@@ -1,14 +1,12 @@
 import gulp from 'gulp'
-import babel from 'gulp-babel'
 import path from 'path'
-import concat from 'gulp-concat'
+import webpack from 'webpack'
+import webpackStream from 'webpack-stream'
+import webpackConfig from '../webpack.config.js'
 
 export function js() {
     return gulp.src(path.resolve(__dirname, '../js/**/*.js'))
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(concat('bundle.js'))
+        .pipe(webpackStream(webpackConfig), webpack)
         .pipe(gulp.dest(path.resolve(__dirname, '../shopify-theme/assets')))
 }
 

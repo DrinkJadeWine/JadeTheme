@@ -5,13 +5,6 @@ h1 {
     margin: 2rem 0;
 }
 
-
-header {
-    @include medium {
-        background-color: $green;
-    }
-}
-
 .hero-container {
     flex-direction: column;
     padding-bottom: 5rem;
@@ -21,7 +14,6 @@ header {
         flex-direction: row;
         padding: 0 5rem 5rem;
         text-align: left;
-        margin-top: 92px;
     }
 
     display: flex;
@@ -29,10 +21,11 @@ header {
     background-color: $green;
     color: $white00;
 
-    .left, .right {
+    .left,
+    .right {
         flex: 1;
     }
-    
+
     .left {
         .image-backdrop {
             width: 100%;
@@ -69,34 +62,6 @@ header {
 
 .mb {
     @include spacing-bottom;
-}
-
-.button {
-    font-family: "AzoSans-Medium", sans-serif;
-    display: flex;
-    text-transform: uppercase;
-    padding: 1rem 3rem;
-    font-size: 1.25rem;
-    font-weight: normal;
-    cursor: pointer;
-    justify-content: center;
-    letter-spacing: 1px;
-    user-select: none;
-
-    &.light {
-        background-color: $white00;
-        color: $dark;
-    }
-    
-    &.dark {
-        background-color: $dark;
-        color: $white00;
-    }
-
-    &.disabled {
-        cursor: not-allowed;
-        pointer-events: none;
-    }
 }
 
 .collection-container {
@@ -156,8 +121,9 @@ header {
             text-align: left;
         }
 
-        h2, p {
-            flex: 1
+        h2,
+        p {
+            flex: 1;
         }
     }
 
@@ -171,7 +137,7 @@ header {
             top: 50%;
             transform: translate(-50%, -50%);
             background-color: $green;
-    
+
             .vjs-icon-placeholder:before {
                 top: 50%;
                 left: 50%;
@@ -180,7 +146,6 @@ header {
         }
     }
 }
-
 
 .pros-container {
     @include section;
@@ -200,7 +165,7 @@ header {
             width: 30%;
         }
     }
-    
+
     .pros-image {
         margin-left: 3rem;
     }
@@ -262,7 +227,7 @@ header {
                 margin-top: 1rem;
                 color: $muted;
                 font-size: 1rem;
-                
+
                 img {
                     margin-right: 0.5rem;
                 }

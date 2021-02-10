@@ -54,12 +54,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
           opacity: $hamburger-active-hover-opacity;
         }
       }
-  
-      .hamburger-inner,
-      .hamburger-inner::before,
-      .hamburger-inner::after {
-        background-color: $hamburger-active-layer-color;
-      }
     }
   }
   
@@ -80,7 +74,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     &::after {
       width: $hamburger-layer-width;
       height: $hamburger-layer-height;
-      background-color: $hamburger-layer-color;
       border-radius: $hamburger-layer-border-radius;
       position: absolute;
       transition-property: transform;

@@ -1,10 +1,6 @@
 h1 {
   margin: 2rem 0; }
 
-@media (min-width: 768px) {
-  header {
-    background-color: #022826; } }
-
 .hero-container {
   flex-direction: column;
   padding-bottom: 5rem;
@@ -17,9 +13,9 @@ h1 {
     .hero-container {
       flex-direction: row;
       padding: 0 5rem 5rem;
-      text-align: left;
-      margin-top: 92px; } }
-  .hero-container .left, .hero-container .right {
+      text-align: left; } }
+  .hero-container .left,
+  .hero-container .right {
     flex: 1; }
   .hero-container .left .image-backdrop {
     width: 100%;
@@ -46,30 +42,6 @@ h1 {
 
 .mb {
   margin-bottom: 2rem; }
-
-.button {
-  font-family: "AzoSans-Medium", sans-serif;
-  display: flex;
-  text-transform: uppercase;
-  padding: 1rem 3rem;
-  font-size: 1.25rem;
-  font-weight: normal;
-  cursor: pointer;
-  justify-content: center;
-  letter-spacing: 1px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-  .button.light {
-    background-color: #fff;
-    color: #000000; }
-  .button.dark {
-    background-color: #000000;
-    color: #fff; }
-  .button.disabled {
-    cursor: not-allowed;
-    pointer-events: none; }
 
 .collection-container {
   display: flex;
@@ -124,7 +96,8 @@ h1 {
       .video-container .video-text {
         flex-direction: row;
         text-align: left; } }
-    .video-container .video-text h2, .video-container .video-text p {
+    .video-container .video-text h2,
+    .video-container .video-text p {
       flex: 1; }
   .video-container .video-js .vjs-big-play-button {
     width: 60px;

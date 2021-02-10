@@ -1,0 +1,27 @@
+<nav id="{{ id }}" class="nav-mobile">
+    <div>
+        {% render 'hamburger' with color: color id: id %}
+    </div>
+    <div class="logo">
+        {% render 'logo' with color: color %}
+    </div>
+    <div class="bag-trigger">
+        {% render 'cart-icon' with color: color %}
+    </div>
+</nav>
+<nav class="nav-desktop">
+    <div class="menu">
+        <a class="nav-link" href="/collections/all">Shop Now</a>
+        <a class="nav-link" href="/">Home</a>
+    </div>
+
+    <div class="logo">
+        {% render 'logo' with color: color %}
+    </div>
+
+    <div class="header-icons">
+        <div class="bag-trigger">
+        {% render 'cart-icon' with color: color %}
+        </div>
+    </div>
+</nav>

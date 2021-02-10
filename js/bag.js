@@ -1,8 +1,13 @@
-const countModifiers = document.querySelectorAll('.count-modifier') || [];
+import formatMoney from './shopify-money';
 
-countModifiers.forEach(modifier => {
-    modifier.onclick = () => handleModifier(modifier)
-})
+export function applyListeners() {
+    const countModifiers = document.querySelectorAll('.count-modifier') || [];
+    countModifiers.forEach(modifier => {
+        modifier.onclick = () => handleModifier(modifier)
+    })
+}
+
+applyListeners()
 
 function modifyItem(line, quantity) {
     const formData = {
@@ -28,14 +33,16 @@ function modifyItem(line, quantity) {
 function handleModifier(modifier) {
     const { line, itemQuantity, modifierType } = modifier.dataset;
     const lineNumber = parseInt(line);
+    const quantity = parseInt(itemQuantity)
     let request = null;
+    const shouldRemoveLine = modifierType === 'delete' || (modifierType === 'minus' && quantity === 1);
 
     switch (modifierType) {
         case 'minus':
-            request = modifyItem(lineNumber, parseInt(itemQuantity) - 1);
+            request = modifyItem(lineNumber, quantity - 1);
             break;
         case 'plus':
-            request = modifyItem(lineNumber, parseInt(itemQuantity) + 1);
+            request = modifyItem(lineNumber, quantity + 1);
             break;
         case 'delete':
             request = modifyItem(lineNumber, 0);
@@ -45,9 +52,14 @@ function handleModifier(modifier) {
     request.then(response => {
         updateTotalCount(response.item_count);
         updateSubTotal(response.items_subtotal_price);
+
+        if (response.item_count === 0) {
+            disableCart()
+        }
+
         const item = response.items[lineNumber - 1];
 
-        if (modifierType === 'delete') {
+        if (shouldRemoveLine) {
             deleteLine(line)
         } else {
             updateLineItem(line, item);
@@ -63,7 +75,7 @@ function updateLineItem(lineNumber, item) {
     const price = document.querySelector(`#item-price-${lineNumber}`);
 
     count.textContent = item.quantity;
-    price.textContent = Shopify.formatMoney(item.final_line_price);
+    price.textContent = formatMoney(item.final_line_price);
     count.setAttribute('data-item-quantity', item.quantity);
     minusModifier.setAttribute('data-item-quantity', item.quantity);
     plusModifier.setAttribute('data-item-quantity', item.quantity);
@@ -75,15 +87,34 @@ function deleteLine(lineNumber) {
     line.remove();
 }
 
-function updateTotalCount(count) {
+export function updateTotalCount(count) {
     const element = document.getElementById('cart-total-count');
     element.textContent = `(${count})`;
 }
 
-function updateSubTotal(subtotal) {
+export function updateSubTotal(subtotal) {
     const subtotalElements = document.querySelectorAll('.cart-items-subtotal');
 
     subtotalElements.forEach(element => {
-        element.textContent = Shopify.formatMoney(subtotal);
+        element.textContent = formatMoney(subtotal);
     })
 }
+
+function toggleCartState(state) {
+    const cartSubTotal = document.querySelector('.cart-subtotal');
+    const emptyCartText = document.querySelector('.empty-cart-text');
+    const checkoutButton = document.querySelector('#drawer-checkout-button');
+
+    if (state === 'active') {
+        cartSubTotal.classList.remove('hidden');
+        emptyCartText.classList.add('hidden');
+        checkoutButton.classList.remove('disabled');
+    } else if (state === 'disable') {
+        cartSubTotal.classList.add('hidden');
+        emptyCartText.classList.remove('hidden');
+        checkoutButton.classList.add('disabled');
+    }
+}
+
+export const activateCart = () => toggleCartState('active');
+export const disableCart = () => toggleCartState('disable');
