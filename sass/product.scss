@@ -1,60 +1,158 @@
 @import "variables";
 @import "mixins";
 
+@mixin width {
+    width: 100%;
+
+    @include medium {
+        width: 700px !important;
+    }
+
+    @include large {
+        width: 800px !important;
+    }
+}
+
 .product-container {
     display: flex;
     flex-direction: column;
-    padding: 4rem 2rem;
-    justify-content: center;
+    align-items: center;
+
+    .product {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 2rem;
+        justify-content: center;
+
+        @include medium {
+            flex-direction: row;
+            left: -20px;
+        }
+
+        @include large {
+            left: -50px;
+        }
+
+        &__image {
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 300px;
+
+                @include large {
+                    height: 500px;
+                }
+            }
+        }
+
+        &__details {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include medium {
+                display: block;
+                text-align: left;
+                width: 500px;
+            }
+
+            &-description {
+                line-height: 2.5rem;
+            }
+
+            &-quantity-picker {
+                padding: 2rem 0;
+                border-top: 2px solid $gray-light;
+                border-bottom: 2px solid $gray-light;
+
+                .quantity-title {
+                    font-size: 1.1rem;
+                    font-family: "AzoSans-Medium", sans-serif;
+                }
+
+                .quantity-help-text {
+                    color: $muted;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .quantity-help-text {
+                margin-top: 1rem;
+
+                @include medium {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .ingredients-container {
+        text-align: center;
+        padding: 4rem 2rem;
+
+        h2 {
+            color: $pink;
+        }
+
+        .ingredients {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @include medium {
+                flex-direction: row;
+            }
+
+            .ingredient {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                span {
+                    text-transform: uppercase;
+                    font-family: "Butler-Medium", sans-serif;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.people-also-love {
+    @include width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 
     @include medium {
         flex-direction: row;
     }
 
-    .product__image {
-        display: flex;
-        justify-content: center;
-
-        img {
-            height: 400px;
-
-            @include medium {
-                height: 300px;
-            }
-
-            @include large {
-                height: 500px;
-            }
-        }
+    span,
+    a {
+        margin-bottom: 1rem;
     }
 
-    .product__details {
-        width: 100%;
-
-        @include medium {
-            width: 500px;
-        }
-
-        &-description {
-            line-height: 2.5rem;
-        }
-
-        &-quantity-picker {
-            padding: 2rem 0;
-            border-top: 2px solid $gray-light;
-            border-bottom: 2px solid $gray-light;
-
-            .quantity-title {
-                font-size: 1.1rem;
-                font-family: "AzoSans-Medium", sans-serif;
-            }
-
-            .quantity-help-text {
-                color: $muted;
-                font-size: 1.5rem;
-            }
-        }
+    span {
+        font-family: "AzoSans-Medium", sans-serif;
     }
+
+    a {
+        font-family: "Butler-Bold", sans-serif;
+        font-size: 2rem;
+        color: $muted;
+        letter-spacing: 1px;
+    }
+}
+
+.yotpo {
+    @include width;
 }
 
 .quantity-picker {

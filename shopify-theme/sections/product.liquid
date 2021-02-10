@@ -1,27 +1,60 @@
 {% assign variant = product.variants[0] %}
+{% assign collection = product.collections[0] %}
 
 <div class="product-container">
-  <div class="product__image">
-    <img src="{{ product.images | first | image_url }}" />
-  </div>
-  <div class="product__details">
-    <h1>{{ product.title }}</h1>
-    <div class="product__details-description">
-      {{ product.description }}
+  <div class="product">
+    <div class="product__image">
+      <img src="{{ product.images | first | image_url }}" />
     </div>
-    <div class="product__details-quantity-picker">
-      <span class="quantity-title">QUANTITY</span>
-      <div class="flex align-items-center mt-2">
-        {% render 'quantity-picker' with quantity: 1, price: product.price, selected: true %}
-        {% render 'quantity-picker' with quantity: 2, price: product.price %}
-        {% render 'quantity-picker' with quantity: 6, price: product.price %}
-        <span class="quantity-help-text">For when you just want that IG Flex</span>
+    <div class="product__details">
+      <h1>{{ product.title }}</h1>
+      <div class="product__details-description">
+        {{ product.description }}
+      </div>
+      <div class="product__details-quantity-picker">
+        <span class="quantity-title">QUANTITY</span>
+        <div class="flex align-items-center column-on-small mt-2">
+          <div class="flex align-items-center mr-2">
+            {% render 'quantity-picker' with quantity: 1, price: product.price, selected: true %}
+            {% render 'quantity-picker' with quantity: 2, price: product.price %}
+            {% render 'quantity-picker' with quantity: 6, price: product.price %}
+          </div>
+           <span class="quantity-help-text">For when you just want that IG Flex</span>
+        </div>
+      </div>
+      <button id="product-add-to-bag" class="button dark mt-2" data-items-quantity="1" data-product-id="{{ variant.id }}">
+        Add to Bag
+        <span class="ml-1 mr-1">-</span>
+        <span id="product-result-price">{{ product.price | money}}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="people-also-love">
+    <span class="uppercase">People also love:</span>
+    {% for otherProduct in collection.products %}
+      {% if otherProduct.id != product.id %}
+        <a href="{{ otherProduct.url }}" target="_blank">{{ otherProduct.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="ingredients-container">
+    <h2>MADE WITH LOVE. <br />ONLY THE GOOD STUFF.</h2>
+    <p>Our vineyards and breweries and specificaly sourced to bring you the breast product <br /> from the most exiquiste regions- it’s highlight for the party :)</p>
+    <div class="ingredients">
+      <div class="ingredient">
+        <img src="{{ 'straberry.png' | asset_url }}" alt="straberry" />
+        <span>Strawberry</span>
+      </div>
+      <div class="ingredient">
+        <img src="{{ 'peach.png' | asset_url }}" alt="peach" />
+        <span>Peach</span>
+      </div>
+      <div class="ingredient">
+        <img src="{{ 'grape.png' | asset_url }}" alt="grape" />
+        <span>DELICIOUS GRAPES</span>
       </div>
     </div>
-    <button id="product-add-to-bag" class="button dark mt-2" data-items-quantity="1" data-product-id="{{ variant.id }}">
-      Add to Bag
-      <span class="ml-1 mr-1">-</span>
-      <span id="product-result-price">{{ product.price | money}}</span>
-    </button>
   </div>
 </div>

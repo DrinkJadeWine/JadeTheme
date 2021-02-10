@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .underlined {
     border-bottom: 2px solid $dark;
@@ -8,8 +9,20 @@
     text-transform: uppercase;
 }
 
+.muted {
+    color: $muted;
+}
+
 .flex {
     display: flex;
+
+    &.column-on-small {
+        flex-direction: column;
+
+        @include medium {
+            flex-direction: row;
+        }
+    }
 }
 
 .align-items-center {

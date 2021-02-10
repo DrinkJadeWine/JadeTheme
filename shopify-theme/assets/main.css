@@ -49,8 +49,16 @@
 .uppercase {
   text-transform: uppercase; }
 
+.muted {
+  color: #7A7A7A; }
+
 .flex {
   display: flex; }
+  .flex.column-on-small {
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      .flex.column-on-small {
+        flex-direction: row; } }
 
 .align-items-center {
   align-items: center; }
