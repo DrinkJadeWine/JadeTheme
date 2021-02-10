@@ -83,20 +83,21 @@ header {
     letter-spacing: 2px;
     z-index: $zIndexHeader;
     width: 100%;
-    background-color: $green;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 0.4s ease-in-out, background-color 0.2s ease-in-out;
 
-    .floating {
-        position: fixed;
-        top: -92px;
-        left: 0;
-        z-index: $zIndexHeader;
-        width: 100%;
-        transition: top 0.4s ease-in-out, opacity 0.4s ease-in-out;
-        background-color: rgba(255, 255, 255, 0.8);
+    &.floating {
+        background-color: rgba($color: #fff, $alpha: 0.9);
+        color: $dark;
 
-        .nav-desktop {
-            color: $dark;
+        .logo {
+            fill: $dark;
+        }
+
+        .cart-icon {
+            stroke: $dark;
         }
     }
 
@@ -120,7 +121,6 @@ header {
             display: flex;
         }
 
-        color: $white00;
         padding: 3rem 5rem;
         flex-direction: row;
         justify-content: space-between;

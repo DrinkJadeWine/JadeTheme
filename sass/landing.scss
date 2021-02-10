@@ -5,6 +5,14 @@ h1 {
     margin: 2rem 0;
 }
 
+header {
+    color: $white00;
+
+    .logo {
+        fill: $white00;
+    }
+}
+
 .hero-container {
     flex-direction: column;
     padding-bottom: 5rem;
@@ -12,7 +20,7 @@ h1 {
 
     @include medium {
         flex-direction: row;
-        padding: 0 5rem 5rem;
+        padding: 92px 5rem 5rem;
         text-align: left;
     }
 

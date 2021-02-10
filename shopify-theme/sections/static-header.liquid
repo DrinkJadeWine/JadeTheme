@@ -1,10 +1,34 @@
 {% assign s = section.settings %}
 {% assign links = linklists[s.menu].links %}
 
-<div class="floating">
-  {% render 'navbar' with color: '#000000' id: "floating-navbar" %}
-</div>
-
 <section data-component="header" data-section-id="{{ section.id }}" data-section-type="header">
-  {% render 'navbar' with color: '#ffffff' id: "original-navbar" %}
+    <nav class="nav-mobile">
+      <div>
+          {% render 'hamburger' %}
+      </div>
+      <div class="logo">
+          {% render 'logo' %}
+      </div>
+      <div class="bag-trigger">
+          {% render 'cart-icon' %}
+      </div>
+  </nav>
+  <nav class="nav-desktop">
+      <div class="menu">
+          <a class="nav-link" href="/collections/all">Shop Now</a>
+          <a class="nav-link" href="/">Home</a>
+      </div>
+
+      <div>
+        <a href="/">
+          {% render 'logo' %}
+        </a>
+      </div>
+
+      <div class="header-icons">
+          <div class="bag-trigger">
+          {% render 'cart-icon' %}
+          </div>
+      </div>
+  </nav>
 </section>

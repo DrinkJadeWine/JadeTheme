@@ -174,18 +174,17 @@ header {
   letter-spacing: 2px;
   z-index: 300;
   width: 100%;
-  background-color: #022826;
-  position: relative; }
-  header .floating {
-    position: fixed;
-    top: -92px;
-    left: 0;
-    z-index: 300;
-    width: 100%;
-    transition: top 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.8); }
-    header .floating .nav-desktop {
-      color: #000000; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.4s ease-in-out, background-color 0.2s ease-in-out; }
+  header.floating {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000; }
+    header.floating .logo {
+      fill: #000000; }
+    header.floating .cart-icon {
+      stroke: #000000; }
   header .nav-mobile {
     display: flex;
     justify-content: space-between;
@@ -198,7 +197,6 @@ header {
   header .nav-desktop {
     z-index: 300;
     display: none;
-    color: #fff;
     padding: 3rem 5rem;
     flex-direction: row;
     justify-content: space-between;

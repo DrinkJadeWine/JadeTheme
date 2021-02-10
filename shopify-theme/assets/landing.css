@@ -1,6 +1,11 @@
 h1 {
   margin: 2rem 0; }
 
+header {
+  color: #fff; }
+  header .logo {
+    fill: #fff; }
+
 .hero-container {
   flex-direction: column;
   padding-bottom: 5rem;
@@ -12,7 +17,7 @@ h1 {
   @media (min-width: 768px) {
     .hero-container {
       flex-direction: row;
-      padding: 0 5rem 5rem;
+      padding: 92px 5rem 5rem;
       text-align: left; } }
   .hero-container .left,
   .hero-container .right {
