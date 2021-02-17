@@ -8,7 +8,6 @@ if (drawerOverlay) {
 
 // Drawer open
 bagTriggers.forEach(trigger => {
-    console.log('WTF?')
     trigger.onclick = openBagDrawer;
 });
 

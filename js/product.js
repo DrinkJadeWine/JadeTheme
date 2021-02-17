@@ -3,31 +3,45 @@ import { updateTotalCount, updateSubTotal, applyListeners, activateCart } from '
 import { openBagDrawer } from './bag-drawer';
 
 const quantityPickers = document.querySelectorAll('.quantity-picker') || [];
-const addToBagButton = document.getElementById('product-add-to-bag');
+const addToBagButtons = document.querySelectorAll('.product-add-to-bag') || [];
 
 // Apply listeners
 quantityPickers.forEach(picker => {
-    picker.onclick = () => {
-        onQuantityPickerClick(picker)
-    }
+    picker.onclick = () => onQuantityPickerClick(picker);
 });
 
-if (addToBagButton) {
-    addToBagButton.onclick = addItemsToBag;
+addToBagButtons.forEach(button => {
+    button.onclick = () => addItemsToBag(button);
+});
+
+
+const filterPickers = (productId) => {
+    const filtered = [];
+
+    quantityPickers.forEach(picker => {
+        if (picker.dataset.productId === productId) {
+            filtered.push(picker)
+        }
+    })
+
+    return filtered;
 }
 
-function selectQuantityPicker(picker) {
-    quantityPickers.forEach(picker => {
+function selectQuantityPicker(picker, productId) {
+    const relatedPickers = filterPickers(productId);
+
+    relatedPickers.forEach(picker => {
         picker.classList.remove('selected');
     });
     picker.classList.add('selected');
 }
 
 function onQuantityPickerClick(picker) {
-    const { quantity, price } = picker.dataset;
-    const productResultPrice = document.getElementById('product-result-price');
+    const { productId, quantity, price } = picker.dataset;
+    const productResultPrice = document.querySelector(`.product-result-price[data-product-id="${productId}"]`);
+    const addToBagButton = document.querySelector(`.product-add-to-bag[data-product-id="${productId}"]`);
 
-    selectQuantityPicker(picker);
+    selectQuantityPicker(picker, productId);
     productResultPrice.textContent = formatMoney(parseFloat(price) * parseInt(quantity));
 
     if (addToBagButton) {
@@ -36,6 +50,7 @@ function onQuantityPickerClick(picker) {
 }
 
 function addItemsAjax(data) {
+    console.log(data)
     return fetch('/cart/add.js', {
         method: 'POST',
         headers: {
@@ -49,8 +64,8 @@ function addItemsAjax(data) {
     });
 }
 
-function addItemsToBag() {
-    const { productId, itemsQuantity } = addToBagButton.dataset;
+function addItemsToBag(button) {
+    const { productId, itemsQuantity } = button.dataset;
 
     const data = {
         'items': [{
@@ -69,7 +84,7 @@ function updateBag() {
         .then(data => {
             const htmlItems = data.items.map((item, index) => {
                 const itemIndex = index + 1;
-                return `<div id="cart-item-${itemIndex}" class="drawer__item">
+                return `<div class="drawer__item cart-item" data-product-id="${item.id}">
                     <div class="drawer__item-image">
                         <img src="${item.image}" alt="${item.title}" />
                     </div>
@@ -79,32 +94,32 @@ function updateBag() {
                         </span>
                         <span>
                             <span
-                                id="item-minus-${itemIndex}"
-                                class="count-modifier"
+                                class="count-modifier minus"
                                 data-modifier-type="minus"
                                 data-item-quantity="${item.quantity}"
                                 data-line="${itemIndex}"
+                                data-product-id="${item.id}"
                             >
                             -
                             </span>
-                            <span id="item-count-${itemIndex}">
+                            <span class="bag-item-quantity" data-product-id="${item.id}">
                                 ${item.quantity}
                             </span>
                             <span
-                                id="item-plus-${itemIndex}"
-                                class="count-modifier"
+                                class="count-modifier plus"
                                 data-modifier-type="plus"
                                 data-item-quantity="${item.quantity}"
                                 data-line="${itemIndex}"
+                                data-product-id="${item.id}"
                             >
                                 +
                             </span>
                             <span
-                                id="item-delete-${itemIndex}"
-                                class="count-modifier ml-1"
+                                class="count-modifier delete ml-1"
                                 data-modifier-type="delete"
                                 data-item-quantity="${item.quantity}"
                                 data-line="${itemIndex}"
+                                data-product-id="${item.id}"
                             >
                                 <svg width="11px" height="12px" viewBox="0 0 11 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
@@ -121,7 +136,7 @@ function updateBag() {
                             </span>
                         </span>
                     </div>
-                    <div id="item-price-${itemIndex}" class="drawer__item-price">
+                    <div class="drawer__item-price item-price" data-product-id="${item.id}">
                         <span>
                             ${formatMoney(item.line_price)}
                         </span>

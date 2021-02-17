@@ -11,7 +11,7 @@
         </div>
         <div id="bag-body" class="drawer__body">
             {% for item in cart.items %}
-                <div id="cart-item-{{ forloop.index }}" class="drawer__item">
+                <div class="drawer__item cart-item" data-product-id="{{ product.id }}">
                     <div class="drawer__item-image">
                         <img src="{{ item.product.images | first | image_url }}" alt="{{ item.product.title }}" />
                     </div>
@@ -21,38 +21,38 @@
                         </span>
                         <span>
                             <span
-                                id="item-minus-{{ forloop.index }}"
                                 class="count-modifier"
                                 data-modifier-type="minus"
                                 data-item-quantity="{{ item.quantity }}"
                                 data-line="{{ forloop.index }}"
+                                data-product-id="{{ product.id }}"
                             >
                             -
                             </span>
-                            <span id="item-count-{{ forloop.index }}">
+                            <span class="bag-item-quantity" data-product-id="{{ product.id }}">
                                 {{ item.quantity }}
                             </span>
                             <span
-                                id="item-plus-{{ forloop.index }}"
                                 class="count-modifier"
                                 data-modifier-type="plus"
                                 data-item-quantity="{{ item.quantity }}"
                                 data-line="{{ forloop.index }}"
+                                data-product-id="{{ product.id }}"
                             >
                                 +
                             </span>
                             <span
-                                id="item-delete-{{ forloop.index }}"
                                 class="count-modifier ml-1"
                                 data-modifier-type="delete"
                                 data-item-quantity="{{ item.quantity }}"
                                 data-line="{{ forloop.index }}"
+                                data-product-id="{{ product.id }}"
                             >
                                 {% render 'trash-icon' %}
                             </span>
                         </span>
                     </div>
-                    <div id="item-price-{{ forloop.index }}" class="drawer__item-price">
+                    <div class="drawer__item-price item-price" data-product-id="{{ product.id }}">
                         <span>
                             {{ item.line_price | money }}
                         </span>

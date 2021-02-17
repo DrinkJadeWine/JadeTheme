@@ -31,7 +31,7 @@ function modifyItem(line, quantity) {
 }
 
 function handleModifier(modifier) {
-    const { line, itemQuantity, modifierType } = modifier.dataset;
+    const { line, itemQuantity, modifierType, productId } = modifier.dataset;
     const lineNumber = parseInt(line);
     const quantity = parseInt(itemQuantity)
     let request = null;
@@ -60,19 +60,21 @@ function handleModifier(modifier) {
         const item = response.items[lineNumber - 1];
 
         if (shouldRemoveLine) {
-            deleteLine(line)
+            deleteLine(productId)
         } else {
-            updateLineItem(line, item);
+            updateLineItem(productId, item);
         }
+
+        updateLines();
     })
 }
 
-function updateLineItem(lineNumber, item) {
-    const count = document.querySelector(`#item-count-${lineNumber}`);
-    const minusModifier = document.querySelector(`#item-minus-${lineNumber}`);
-    const plusModifier = document.querySelector(`#item-plus-${lineNumber}`);
-    const deleteModifier = document.querySelector(`#item-delete-${lineNumber}`);
-    const price = document.querySelector(`#item-price-${lineNumber}`);
+function updateLineItem(productId, item) {
+    const count = document.querySelector(`.bag-item-quantity[data-product-id="${productId}"]`);
+    const minusModifier = document.querySelector(`.count-modifier.minus[data-product-id="${productId}"]`);
+    const plusModifier = document.querySelector(`.count-modifier.plus[data-product-id="${productId}"]`);
+    const deleteModifier = document.querySelector(`.count-modifier.delete[data-product-id="${productId}"]`);
+    const price = document.querySelector(`.item-price[data-product-id="${productId}"]`);
 
     count.textContent = item.quantity;
     price.textContent = formatMoney(item.final_line_price);
@@ -82,8 +84,9 @@ function updateLineItem(lineNumber, item) {
     deleteModifier.setAttribute('data-item-quantity', item.quantity);
 }
 
-function deleteLine(lineNumber) {
-    const line = document.querySelector(`#cart-item-${lineNumber}`);
+function deleteLine(productId) {
+    console.log(productId)
+    const line = document.querySelector(`.cart-item[data-product-id="${productId}"]`);
     line.remove();
 }
 
@@ -114,6 +117,18 @@ function toggleCartState(state) {
         emptyCartText.classList.remove('hidden');
         checkoutButton.classList.add('disabled');
     }
+}
+
+function updateLines() {
+    const items = document.querySelectorAll('.cart-item');
+
+    items.forEach((item, index) => {
+        const countModifiers = item.querySelectorAll('.count-modifier');
+
+        countModifiers.forEach(modifier => {
+            modifier.setAttribute('data-line', index + 1)
+        });
+    });
 }
 
 export const activateCart = () => toggleCartState('active');
