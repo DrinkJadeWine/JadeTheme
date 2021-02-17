@@ -1,3 +1,14 @@
+@charset "UTF-8";
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+// Settings
+// ==================================================
 $hamburger-padding-x: 0 !default;
 $hamburger-padding-y: 0 !default;
 $hamburger-layer-width: 40px !default;
@@ -52,6 +63,12 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         opacity: $hamburger-active-hover-opacity;
       }
     }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-active-layer-color;
+    }
   }
 }
 
@@ -72,6 +89,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
   &::after {
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
+    background-color: $hamburger-layer-color;
     border-radius: $hamburger-layer-border-radius;
     position: absolute;
     transition-property: transform;

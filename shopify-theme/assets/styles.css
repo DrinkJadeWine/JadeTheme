@@ -4,6 +4,63 @@
   display: flex;
   justify-content: center; }
 
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 0 0;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #000; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -10808,6 +10865,9 @@ h1 {
 .align-self-center {
   align-self: center; }
 
+.y-scroll {
+  overflow-y: scroll; }
+
 @font-face {
   font-family: "AzoSans";
   src: url("AzoSans-Regular.ttf") format("truetype"); }
@@ -10885,6 +10945,8 @@ header {
       fill: #fff; }
     header.index-page .cart-icon, header.collection-page .cart-icon {
       stroke: #fff; }
+    header.index-page .hamburger-inner, header.index-page .hamburger-inner::before, header.index-page .hamburger-inner::after, header.collection-page .hamburger-inner, header.collection-page .hamburger-inner::before, header.collection-page .hamburger-inner::after {
+      background-color: #fff; }
   header.floating {
     background-color: rgba(255, 255, 255, 0.9);
     color: #000000; }
@@ -11002,8 +11064,7 @@ form.form {
     margin-top: 2rem;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    overflow-y: scroll; }
+    flex-direction: column; }
     .drawer-menu .drawer__body .drawer__item {
       margin-top: 2rem;
       font-size: 4rem; }
