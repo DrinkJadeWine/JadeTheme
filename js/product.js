@@ -39,7 +39,7 @@ function selectQuantityPicker(picker, productId) {
 function onQuantityPickerClick(picker) {
     const { productId, quantity, price } = picker.dataset;
     const productResultPrice = document.querySelector(`.product-result-price[data-product-id="${productId}"]`);
-    const addToBagButton = document.querySelector(`.product-add-to-bag[data-product-id="${productId}"]`);
+    const addToBagButton = document.querySelector(`button[data-product-id="${productId}"]`);
 
     selectQuantityPicker(picker, productId);
     productResultPrice.textContent = formatMoney(parseFloat(price) * parseInt(quantity));
@@ -65,11 +65,11 @@ function addItemsAjax(data) {
 }
 
 function addItemsToBag(button) {
-    const { productId, itemsQuantity } = button.dataset;
+    const { variantId, itemsQuantity } = button.dataset;
 
     const data = {
         'items': [{
-            'id': parseInt(productId),
+            'id': parseInt(variantId),
             'quantity': parseInt(itemsQuantity)
         }]
     };
