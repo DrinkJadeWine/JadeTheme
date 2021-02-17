@@ -1,0 +1,29 @@
+{% assign variant = product.variants[0] %}
+
+<div class="product {% if reverse == 0 %}reverse{% endif %}">
+    <div class="product__image">
+      <img src="{{ product.images | first | image_url }}" />
+    </div>
+    <div class="product__details">
+      <h1>{{ product.title }}</h1>
+      <div class="product__details-description">
+        {{ product.description }}
+      </div>
+      <div class="product__details-quantity-picker">
+        <span class="quantity-title">QUANTITY</span>
+        <div class="flex align-items-center column-on-small mt-2">
+          <div class="flex align-items-center mr-2">
+            {% render 'quantity-picker' with quantity: 1, product: product, selected: true %}
+            {% render 'quantity-picker' with quantity: 2, product: product %}
+            {% render 'quantity-picker' with quantity: 6, product: product %}
+          </div>
+           <span class="quantity-help-text">For when you just want that IG Flex</span>
+        </div>
+      </div>
+      <button class="button dark mt-2 product-add-to-bag" data-items-quantity="1" data-product-id="{{ variant.id }}">
+        Add to Bag
+        <span class="ml-1 mr-1">-</span>
+        <span class="product-result-price" data-product-id="{{ product.id }}">{{ product.price | money}}</span>
+      </button>
+    </div>
+  </div>

@@ -139,17 +139,10 @@
     </script>
 
     {% render 'css-variables' %}
-    {{ 'index.css' | asset_url | stylesheet_tag }}
-    {{ 'shopify.css' | asset_url | stylesheet_tag }}
-    {{ 'main.css' | asset_url | stylesheet_tag }}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
 
     {% if template.name == 'index' %}
       <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
-      {{ 'landing.css' | asset_url | stylesheet_tag }}
-    {% endif %}
-
-    {% if template.name == 'product' %}
-    {{ 'product.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
     {{ content_for_header }}
@@ -158,7 +151,7 @@
   <body class='{%- if settings.uppercase_headings -%}g-uppercase{%- endif -%} preload'>
 
     <main role='main' id='root'>
-      <header class="header-container">
+      <header class="header-container {{ template.name }}-page">
         {% section 'static-announcement-bar' %}
         {% section 'static-header' %}
       </header>

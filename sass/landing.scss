@@ -5,14 +5,6 @@ h1 {
     margin: 2rem 0;
 }
 
-header {
-    color: $white00;
-
-    .logo {
-        fill: $white00;
-    }
-}
-
 .hero-container {
     flex-direction: column;
     padding-bottom: 5rem;
@@ -70,40 +62,6 @@ header {
 
 .mb {
     @include spacing-bottom;
-}
-
-.collection-container {
-    @include section;
-    padding-bottom: 7rem;
-    flex-direction: column;
-    text-align: center;
-
-    .products {
-        display: flex;
-        flex-direction: column;
-
-        @include medium {
-            flex-direction: row;
-        }
-
-        .product-tile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 1rem;
-            margin-top: 2rem;
-
-            @include medium {
-                margin-top: 0;
-            }
-
-            .product-description {
-                line-height: 3rem;
-                font-weight: normal;
-                text-align: center;
-            }
-        }
-    }
 }
 
 .section-delimeter {

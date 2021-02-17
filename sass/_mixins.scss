@@ -18,32 +18,32 @@
     @media (min-width: 576px) {
         @content;
     }
- }
- 
- // Medium devices
- @mixin medium {
+}
+
+// Medium devices
+@mixin medium {
     @media (min-width: 768px) {
         @content;
     }
- }
- 
- // Large devices
- @mixin large {
+}
+
+// Large devices
+@mixin large {
     @media (min-width: 992px) {
         @content;
     }
- }
- 
- // Extra large devices
- @mixin extra-large {
+}
+
+// Extra large devices
+@mixin extra-large {
     @media (min-width: 1200px) {
         @content;
     }
- }
+}
 
- // Custom devices
+// Custom devices
 @mixin custom($screen) {
     @media (min-width: $screen) {
         @content;
     }
- }
+}

@@ -1,6 +1,5 @@
 @import "variables";
 @import "mixins";
-@import "hamburger";
 @import "helpers";
 
 @font-face {
@@ -87,6 +86,17 @@ header {
     top: 0;
     left: 0;
     transition: top 0.4s ease-in-out, background-color 0.2s ease-in-out;
+
+    &.index-page,
+    &.collection-page {
+        color: $white00;
+        .logo {
+            fill: $white00;
+        }
+        .cart-icon {
+            stroke: $white00;
+        }
+    }
 
     &.floating {
         background-color: rgba($color: #fff, $alpha: 0.9);
@@ -251,6 +261,7 @@ form.form {
         width: 100%;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
 
         .drawer__item {
             margin-top: 2rem;
@@ -383,4 +394,42 @@ form.form {
     left: 0;
     display: none;
     z-index: $zIndexDrawerOverlay;
+}
+
+.collection-container {
+    @include section;
+    padding-bottom: 7rem;
+    flex-direction: column;
+    text-align: center;
+
+    .products {
+        display: flex;
+        flex-direction: column;
+
+        @include medium {
+            flex-direction: row;
+        }
+
+        .product-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 1rem;
+            margin-top: 2rem;
+
+            @include medium {
+                margin-top: 0;
+            }
+
+            .product-description {
+                line-height: 3rem;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+
+    .additional-text {
+        line-height: 3rem;
+    }
 }
