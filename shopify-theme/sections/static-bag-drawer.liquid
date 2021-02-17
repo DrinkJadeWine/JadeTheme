@@ -1,5 +1,5 @@
 <div class="drawer-overlay"></div>
-<div id="bag-drawer" class="bag-drawer">
+<div id="bag-drawer" class="bag-drawer y-scroll">
     <div>
         <div class="drawer__header">
             <div class="flex align-items-center">
@@ -9,7 +9,7 @@
                 {% render 'icon' with icon: 'close' %}
             </div>
         </div>
-        <div id="bag-body" class="drawer__body y-scroll">
+        <div id="bag-body" class="drawer__body">
             {% for item in cart.items %}
                 <div class="drawer__item cart-item" data-product-id="{{ product.id }}">
                     <div class="drawer__item-image">

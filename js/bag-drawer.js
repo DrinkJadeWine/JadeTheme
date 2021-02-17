@@ -23,6 +23,7 @@ export function openBagDrawer() {
     if (bag) {
         bag.classList.add('open');
         drawerOverlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     }
 }
 
@@ -32,5 +33,6 @@ export function closeBagDrawer() {
     if (bag) {
         bag.classList.remove('open');
         drawerOverlay.style.display = 'none';
+        document.body.style.overflow = null;
     }
 }
