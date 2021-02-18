@@ -1,33 +1,42 @@
 <section data-section-id="{{ section.id }}">
     <div class="reviews-container">
-        <div class="review-list">
-            <div class="review-item">
-                {% render "star-rating" %}
-                <p class="review-text">“I’ve never had something so delivious come from such a pretty bottle. My girlfriends absolutely loved it!“</p>
-                <span class="reviewer-name">- Susan</span>
-                <div class="reviewer-verified">
-                    <img src="{{ 'check.svg' | asset_url }}" alt="check" />
-                    Verified buyer
-                </div>
+        <div class="reviews-glide">
+            <div class="reviews-glide__track" data-glide-el="track">
+              <ul class="review-list reviews-glide__slides">
+                  <li class="review-item reviews-glide__slide">
+                    {% render "star-rating" %}
+                    <p class="review-text">“I’ve never had something so delivious come from such a pretty bottle. My girlfriends absolutely loved it!“</p>
+                    <span class="reviewer-name">- Susan</span>
+                    <div class="reviewer-verified">
+                        <img src="{{ 'check.svg' | asset_url }}" alt="check" />
+                        Verified buyer
+                    </div>
+                  </li>
+                  <li class="review-item reviews-glide__slide">
+                    {% render "star-rating" %}
+                    <p class="review-text">“I’ve never had something so delivious come from such a pretty bottle. My girlfriends absolutely loved it!“</p>
+                    <span class="reviewer-name">- Susan</span>
+                    <div class="reviewer-verified">
+                        <img src="{{ 'check.svg' | asset_url }}" alt="check" />
+                        Verified buyer
+                    </div>
+                  </li>
+                  <li class="review-item reviews-glide__slide">
+                    {% render "star-rating" %}
+                    <p class="review-text">“I’ve never had something so delivious come from such a pretty bottle. My girlfriends absolutely loved it!“</p>
+                    <span class="reviewer-name">- Susan</span>
+                    <div class="reviewer-verified">
+                        <img src="{{ 'check.svg' | asset_url }}" alt="check" />
+                        Verified buyer
+                    </div>
+                  </li>
+              </ul>
             </div>
-            <div class="review-item">
-                {% render "star-rating" %}
-                <p class="review-text">“I’ve never had something so delivious come from such a pretty bottle. My girlfriends absolutely loved it!“</p>
-                <span class="reviewer-name">- Susan</span>
-                <div class="reviewer-verified">
-                    <img src="{{ 'check.svg' | asset_url }}" alt="check" />
-                    Verified buyer
-                </div>
+            <div class="reviews-glide__bullets" data-glide-el="controls[nav]">
+              <button class="reviews-glide__bullet" data-glide-dir="=0"></button>
+              <button class="reviews-glide__bullet" data-glide-dir="=1"></button>
+              <button class="reviews-glide__bullet" data-glide-dir="=2"></button>
             </div>
-            <div class="review-item">
-                {% render "star-rating" %}
-                <p class="review-text">“I’ve never had something so delivious come from such a pretty bottle. My girlfriends absolutely loved it!“</p>
-                <span class="reviewer-name">- Susan</span>
-                <div class="reviewer-verified">
-                    <img src="{{ 'check.svg' | asset_url }}" alt="check" />
-                    Verified buyer
-                </div>
-            </div>
-        </div>
+          </div>
     </div>
 </section>

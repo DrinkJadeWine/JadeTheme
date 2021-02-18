@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Theme for drinkjade.co",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@shopify/themekit": "^1.1.7",
     "gulp": "^4.0.2"
   },

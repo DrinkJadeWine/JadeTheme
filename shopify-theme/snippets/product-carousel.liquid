@@ -14,15 +14,24 @@
         {% if additional_text %}
         <p class="additional-text">{{ additional_text }}</p>
         {% endif %}
-        <div class="products">
-          {% for product in collection.products %}
-            <div class="product-tile">
-              <img src="{{ product.images | first | image_url }}" alt="{{ product.title }} " />
-              <h3>{{ product.title }}</h3>
-              <p class="product-description">The delightfully luscious and harmonious sensation <br /> on the palate is sure to leave you wanting more.</p>
-              <a class="button dark" href="{{ product.url }}">Shop Now</a>
-            </div>
-          {% endfor %}
+        <div class="products-glide">
+          <div class="products-glide__track" data-glide-el="track">
+            <ul class="products products-glide__slides">
+              {% for product in collection.products %}
+                <li class="product-tile products-glide__slide">
+                  <img src="{{ product.images | first | image_url }}" alt="{{ product.title }} " />
+                  <h3>{{ product.title }}</h3>
+                  <p class="product-description">The delightfully luscious and harmonious sensation <br /> on the palate is sure to leave you wanting more.</p>
+                  <a class="button dark" href="{{ product.url }}">Shop Now</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="products-glide__bullets" data-glide-el="controls[nav]">
+            {% for product in collection.products %}
+              <button class="products-glide__bullet" data-glide-dir="={{ forloop.index0 }}"></button>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </section>
