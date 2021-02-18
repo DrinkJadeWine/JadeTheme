@@ -6,11 +6,24 @@
     <div class="footer-items"> 
       <h2>Stay connected</h2> 
       <p>We love making new friends. Subscribe to our newsletter for updates, new launches, discounts, and more.</p>
-      <form class="form">
-        <input class="input" type="email" placeholder="YOUR EMAIL ADDRESS" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      {% form 'customer' %}
+        {{ form.errors | default_errors }}
+        {% if form.posted_successfully? %}
+          <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
+        {% else %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+            <input
+              class="input"
+              type="email"
+              name="contact[email]"
+              id="Email"
+              value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+              placeholder="YOUR EMAIL ADDRES"
+              autocorrect="off"
+              autocapitalize="off">
+            <button type="submit">Submit</button>
+        {% endif %}
+      {% endform %}
   </div>
 </footer>
 

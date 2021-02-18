@@ -11263,11 +11263,11 @@ h2 {
   .footer-container h2 {
     margin: 0; }
 
-form.form {
+form.contact-form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
-  form.form button {
+  form.contact-form button {
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #7a7a7a;
@@ -11275,7 +11275,7 @@ form.form {
     color: #fff;
     font-size: 1rem;
     outline: none; }
-  form.form .input {
+  form.contact-form .input {
     background-color: transparent;
     color: #7a7a7a;
     outline: none;
@@ -11419,7 +11419,8 @@ form.form {
   overflow-x: hidden; }
   .collection-container .products {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: center; }
     .collection-container .products .product-tile {
       display: flex;
       flex-direction: column;

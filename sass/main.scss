@@ -216,7 +216,7 @@ h2 {
     }
 }
 
-form.form {
+form.contact-form {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -420,6 +420,7 @@ form.form {
     .products {
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         .product-tile {
             display: flex;
