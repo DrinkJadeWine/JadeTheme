@@ -148,7 +148,7 @@
     {{ content_for_header }}
   </head>
 
-  <body class='{%- if settings.uppercase_headings -%}g-uppercase{%- endif -%} preload'>
+  <body class='{%- if settings.uppercase_headings -%}g-uppercase{%- endif -%} preload {{ template.name }}-page'>
 
     <main role='main' id='root'>
       <header class="header-container {{ template.name }}-page">
@@ -157,7 +157,9 @@
       </header>
       {% section 'static-drawer-menu' %}
       {% section 'static-bag-drawer' %}
-      {{ content_for_layout }}
+      <div class="layout-container">
+        {{ content_for_layout }}
+      </div>
       {% section 'static-footer2' %}
     </main>
 

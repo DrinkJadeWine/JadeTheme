@@ -10638,7 +10638,6 @@ h1 {
   @media (min-width: 768px) {
     .hero-container {
       flex-direction: row;
-      padding: 92px 5rem 5rem;
       text-align: left; } }
   .hero-container .left,
   .hero-container .right {
@@ -11164,6 +11163,16 @@ h1 {
   font-family: "Butler-Medium";
   src: url("Butler_Medium.otf") format("opentype"); }
 
+.layout-container {
+  padding-top: 92px;
+  min-height: calc(100vh - 300px); }
+
+body.index-page {
+  background-color: #022826; }
+
+body.collection-page {
+  background-color: #000000; }
+
 html,
 body {
   background-color: #ebeae7;
@@ -11590,8 +11599,7 @@ header .cart-icon {
 .product-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 92px; }
+  align-items: center; }
   .product-container .ingredients-container {
     text-align: center;
     padding: 4rem 2rem; }

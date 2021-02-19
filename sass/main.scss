@@ -34,6 +34,21 @@ $glide-class: "reviews-glide";
     src: url("Butler_Medium.otf") format("opentype");
 }
 
+.layout-container {
+    padding-top: 92px;
+    min-height: calc(100vh - 300px);
+}
+
+body {
+    &.index-page {
+        background-color: $green;
+    }
+
+    &.collection-page {
+        background-color: $dark;
+    }
+}
+
 html,
 body {
     background-color: $white10;
