@@ -8,8 +8,11 @@ initCarousel('.products-glide');
 initCarousel('.reviews-glide');
 
 function initCarousel(querySelector) {
+    if (!document.querySelector(querySelector)) {
+        return;
+    }
+
     const bodyWidth = document.body.clientWidth;
-    const slides = document.querySelectorAll('.glide__slide');
 
     // Mount carousel on small and medium devices
     if (bodyWidth <= 992) {
@@ -17,11 +20,6 @@ function initCarousel(querySelector) {
     } else {
         if (glide) {
             glide.destroy();
-
-            slides.forEach(slide => {
-                slide.style.width = 'auto';
-                slide.style.marginRight = 0;
-            })
         }
     }
 }

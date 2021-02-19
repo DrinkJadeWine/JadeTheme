@@ -55,7 +55,7 @@ header {
         img {
             height: 300px;
 
-            @include large {
+            @include extra-large {
                 height: 500px;
             }
         }
@@ -74,9 +74,13 @@ header {
             width: 500px;
         }
 
+        @include large {
+            width: 800px;
+        }
+
         &-description {
+            color: $dark;
             line-height: 2.5rem;
-            text-align: left;
         }
 
         &-quantity-picker {
@@ -177,8 +181,8 @@ header {
 }
 
 .quantity-picker {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;

@@ -45,6 +45,7 @@ p,
 span {
     font-family: "AzoSans", sans-serif;
     letter-spacing: 1px;
+    line-height: 3rem;
 }
 
 .bag-trigger {
@@ -59,13 +60,14 @@ span {
     font-family: "AzoSans-Medium", sans-serif;
     display: flex;
     text-transform: uppercase;
-    padding: 1rem 3rem;
+    padding: 1.3rem 4rem;
     font-size: 1.25rem;
     font-weight: normal;
     cursor: pointer;
     justify-content: center;
     letter-spacing: 1px;
     user-select: none;
+    align-items: center;
 
     &.light {
         background-color: $white00;
@@ -93,6 +95,12 @@ header {
     top: 0;
     left: 0;
     transition: top 0.4s ease-in-out, background-color 0.2s ease-in-out;
+
+    .logo-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     &.index-page,
     &.collection-page {
@@ -123,6 +131,14 @@ header {
 
         .cart-icon {
             stroke: $dark;
+        }
+
+        .hamburger-inner {
+            &,
+            &::before,
+            &::after {
+                background-color: $dark;
+            }
         }
     }
 
@@ -185,14 +201,30 @@ h1 {
     @include medium {
         font-size: 4rem;
     }
+
+    @include large {
+        font-size: 6rem;
+    }
+}
+
+h2,
+h3 {
+    font-family: "Butler-Bold", sans-serif;
 }
 
 h2 {
-    font-family: "Butler-Bold", sans-serif;
     font-size: 2.5rem;
 
     @include medium {
         font-size: 3rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+
+    @include medium {
+        font-size: 2.5rem;
     }
 }
 
@@ -431,6 +463,10 @@ form.contact-form {
 
             img {
                 height: 300px;
+
+                @include extra-large {
+                    height: 400px;
+                }
             }
 
             @include medium {
