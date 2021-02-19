@@ -79,8 +79,12 @@ header {
         }
 
         &-description {
-            color: $dark;
-            line-height: 2.5rem;
+            &,
+            span {
+                font-family: "AzoSans", sans-serif;
+                color: $dark;
+                line-height: 3rem;
+            }
         }
 
         &-quantity-picker {

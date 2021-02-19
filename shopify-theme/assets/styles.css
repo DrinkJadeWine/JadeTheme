@@ -11484,9 +11484,13 @@ form.contact-form {
         .collection-container .products .product-tile {
           margin-top: 0; } }
       .collection-container .products .product-tile .product-description {
-        line-height: 3rem;
-        font-weight: normal;
-        text-align: center; }
+        max-width: 500px; }
+        .collection-container .products .product-tile .product-description,
+        .collection-container .products .product-tile .product-description span {
+          font-family: "AzoSans", sans-serif;
+          line-height: 3rem;
+          font-weight: normal;
+          text-align: center; }
   .collection-container .additional-text {
     line-height: 3rem; }
 
@@ -11562,9 +11566,11 @@ header .cart-icon {
     @media (min-width: 992px) {
       .product__details {
         width: 800px; } }
-    .product__details-description {
+    .product__details-description,
+    .product__details-description span {
+      font-family: "AzoSans", sans-serif;
       color: #000000;
-      line-height: 2.5rem; }
+      line-height: 3rem; }
     .product__details-quantity-picker {
       padding: 2rem 0;
       border-top: 2px solid #dddcd9;

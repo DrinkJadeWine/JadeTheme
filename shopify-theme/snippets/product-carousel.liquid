@@ -21,8 +21,8 @@
                 <li class="product-tile products-glide__slide">
                   <img src="{{ product.images | first | image_url }}" alt="{{ product.title }} " />
                   <h3>{{ product.title }}</h3>
-                  <p class="product-description">The delightfully luscious and harmonious sensation <br /> on the palate is sure to leave you wanting more.</p>
-                  <a class="button dark" href="{{ product.url }}">Shop Now</a>
+                  <div class="product-description">{{ product.description | truncate: 200 }}</div>
+                  <a class="button dark mt-2" href="{{ product.url }}">Shop Now</a>
                 </li>
               {% endfor %}
             </ul>
