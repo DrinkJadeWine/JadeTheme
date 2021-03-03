@@ -23,7 +23,8 @@
     "webpack-stream": "^6.1.2"
   },
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "deploy:prod": "theme deploy --env production"
   },
   "author": "",
   "license": "ISC"
