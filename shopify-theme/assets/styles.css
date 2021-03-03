@@ -10893,6 +10893,16 @@ h1 {
 .heading {
   font-family: "Butler-Bold", sans-serif; }
 
+@media (min-width: 992px) {
+  .mobile {
+    display: none !important; } }
+
+.desktop {
+  display: none !important; }
+  @media (min-width: 992px) {
+    .desktop {
+      display: flex !important; } }
+
 .products-glide {
   position: relative;
   width: 100%;

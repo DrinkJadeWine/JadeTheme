@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ \"./node_modules/@glidejs/glide/dist/glide.esm.js\");\n\nvar glide = null;\nwindow.addEventListener('resize', function () {\n  return initCarousel('.products-glide');\n});\nwindow.addEventListener('resize', function () {\n  return initCarousel('.reviews-glide');\n});\ninitCarousel('.products-glide');\ninitCarousel('.reviews-glide');\n\nfunction initCarousel(querySelector) {\n  if (!document.querySelector(querySelector)) {\n    return;\n  }\n\n  var bodyWidth = document.body.clientWidth; // Mount carousel on small and medium devices\n\n  if (bodyWidth <= 992) {\n    glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__[\"default\"](querySelector, {\n      type: 'carousel',\n      autoplay: 3000\n    }).mount();\n  } else {\n    if (glide) {\n      glide.destroy();\n    }\n  }\n}\n\n//# sourceURL=webpack:///./js/carousel.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ \"./node_modules/@glidejs/glide/dist/glide.esm.js\");\n\ninitCarousel('.products-glide');\ninitCarousel('.reviews-glide');\n\nfunction initCarousel(querySelector) {\n  if (!document.querySelector(querySelector)) {\n    return;\n  }\n\n  new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__[\"default\"](querySelector, {\n    type: 'carousel',\n    autoplay: 3000\n  }).mount();\n}\n\n//# sourceURL=webpack:///./js/carousel.js?");
 
 /***/ }),
 

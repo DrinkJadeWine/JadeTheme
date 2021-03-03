@@ -96,3 +96,17 @@
 .heading {
     font-family: "Butler-Bold", sans-serif;
 }
+
+.mobile {
+    @include large {
+        display: none !important;
+    }
+}
+
+.desktop {
+    display: none !important;
+
+    @include large {
+        display: flex !important;
+    }
+}

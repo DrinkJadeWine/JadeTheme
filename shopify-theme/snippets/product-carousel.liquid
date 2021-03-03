@@ -16,7 +16,7 @@
         {% endif %}
         <div class="products-glide">
           <div class="products-glide__track" data-glide-el="track">
-            <ul class="products products-glide__slides">
+            <ul class="products mobile products-glide__slides">
               {% for product in collection.products %}
                 <li class="product-tile products-glide__slide">
                   <img src="{{ product.images | first | image_url }}" alt="{{ product.title }} " />
@@ -33,7 +33,17 @@
             {% endfor %}
           </div>
         </div>
-      </div>
+        <ul class="products desktop">
+          {% for product in collection.products %}
+          <li class="product-tile">
+            <img src="{{ product.images | first | image_url }}" alt="{{ product.title }} " />
+            <h3>{{ product.title }}</h3>
+            <div class="product-description">{{ product.description | truncate: 200 }}</div>
+            <a class="button dark mt-2" href="{{ product.url }}">Shop Now</a>
+          </li>
+          {% endfor %}
+        </ul>
+        </div>
     </section>
   {% endif %}
 {% endfor %}
