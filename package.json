@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "gulp",
-    "deploy:prod": "theme deploy --env production"
+    "deploy:prod": "theme deploy --env production --allow-live"
   },
   "author": "",
   "license": "ISC"
